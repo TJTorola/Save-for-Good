@@ -25,12 +25,12 @@ Save for Good is a micro lending platform supported by Maple Microfinace. It all
 * [Redux Structure][redux-structure]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframe
-[components]: docs/component-heirarchy.md
-[redux-structure]: docs/redux-structure.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: wireframe
+[components]: component-heirarchy.md
+[redux-structure]: redux-structure.md
+[sample-state]: sample-state.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
 
 ## Implementation Timeline
 
