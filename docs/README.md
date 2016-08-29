@@ -6,13 +6,13 @@
 
 ## Minimum Viable Product
 
-Save for Good is a micro lending platform supported by Maple Microfinace. It allows to make no-intrest loans to entrepenuers around the world where traditional lending services aren't availible.
+Save for Good is a micro lending platform supported by Maple Microfinace. It allows to make no-intrest loans to Entrepreneurs around the world where traditional lending services aren't availible.
 
 - [ ] Hosting on Heroku
 - [ ] Lender account creation
 - [ ] Lender Portfolio View
-- [ ] Entrepenuer Feed
-- [ ] Individual Entrepenuer Page
+- [ ] Entrepreneur Feed
+- [ ] Individual Entrepreneur Page
 - [ ] Checkout Process
 - [ ] Production README
 
@@ -51,12 +51,12 @@ Save for Good is a micro lending platform supported by Maple Microfinace. It all
 - [ ] Style signup/signin components
 - [ ] Review phase 1
 
-### Phase 3: Entrepreneur Feed (1.5 Day)
+### Phase 2: Entrepreneur Feed (1.5 Day)
 
 **Objective:** Entrepreneurs (Ents) can be collected and browsed through the index/feed page
 
 - [ ] `Loan` Model
-- [ ] `Entrepenuer` model
+- [ ] `Entrepreneur` model
 - [ ] `Contribution` model
 - [ ] Seed database with a small amount of test data
 - [ ] CRUD API for entrepreneur (`LoansController`)
