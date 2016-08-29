@@ -11,10 +11,9 @@ Save for Good is a micro lending platform supported by Maple Microfinace. It all
 - [ ] Hosting on Heroku
 - [ ] Lender account creation
 - [ ] Lender Portfolio View
-- [ ] Portfolio Statistics/Table
 - [ ] Entrepenuer Feed
 - [ ] Individual Entrepenuer Page
-- [ ] Checkout Process Using Stripe
+- [ ] Checkout Process
 - [ ] Production README
 
 ## Design Docs
@@ -48,18 +47,11 @@ Save for Good is a micro lending platform supported by Maple Microfinace. It all
 - [ ] User signup/signin components
 - [ ] Blank portfolio component after signup/signin
 - [ ] Seed users
+- [ ] Basic CSS reset/skeleton
+- [ ] Style signup/signin components
 - [ ] Review phase 1
 
-### Phase 2: Basic Styling (1 day)
-
-- [ ] Basic CSS reset/skeleton
-- [ ] Toolbar CSS
-- [ ] Lightbox CSS
-- [ ] Notifications CSS
-- [ ] Tooltips CSS
-- [ ] Style signup/signin components
-
-### Phase 3: Entrepreneur Feed (1 Day)
+### Phase 3: Entrepreneur Feed (1.5 Day)
 
 **Objective:** Entrepreneurs (Ents) can be collected and browsed through the index/feed page
 
@@ -103,6 +95,7 @@ Save for Good is a micro lending platform supported by Maple Microfinace. It all
 - [ ] Style Portfolio Page
 
 ### Bonus Features (TBD)
+- [ ] Integrate Stripe into Checkout Process
 - [ ] Entrepreneurs Feed Can be Filtered with a Search-as-you-type bar
 - [ ] Crumbs to navigate wherever you are
 - [ ] Single Entrepreneur Page has a map to show where ent is located
