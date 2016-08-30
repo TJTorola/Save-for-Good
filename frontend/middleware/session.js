@@ -13,7 +13,7 @@ const createSession = (api, store, action) => {
 }
 
 const destroySession = (api, store) => {
-	promise = api.destroyCurrent();
+	let promise = api.destroy();
 
 	promise.done(() => {
 		store.dispatch(removeUser());
