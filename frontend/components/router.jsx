@@ -1,7 +1,15 @@
 import React from 'react';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-const Router = () => (
-	<div>Im a router!</div>
+import App from './app';
+import Login from './login';
+import Register from './register';
+
+export default () => (
+	<Router history={ browserHistory }>
+		<Route path="/" component={ App }>
+			<Route path="login" component={ Login } />
+			<Route path="register" component={ Register } />
+		</Route>
+	</Router>
 );
-
-export default Router;

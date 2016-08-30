@@ -1,6 +1,6 @@
 import ajax from './ajax';
 
-export default dispatch => {
+export default dispatch => ({
 	post: user => ajax({
 		method: 'POST',
 		url: '/api/session',
@@ -11,4 +11,4 @@ export default dispatch => {
 		method: 'DELETE',
 		url: '/api/session'
 	}, dispatch)
-};
+});
