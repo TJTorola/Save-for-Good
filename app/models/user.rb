@@ -1,16 +1,27 @@
 class User < ActiveRecord::Base
 	attr_reader :password
 	after_initialize :ensure_session_token
+	before_save :downcase_email
 
 	validates :password_digest, presence: true
 	validates :password, length: { minimum: 8, allow_nil: true }
-	validates :session_token, :name, :email, presence: true, uniqueness: true
+	validates(
+		:session_token,
+		:first_name, 
+		:last_name, 
+		:email, 
+		presence: true, uniqueness: true
+	)
 
 	def self.find_by_credentials(params)
 		user = User.find_by(email: params[:email])
 		return unless user
 
 		user.is_password?(params[:password]) ? user : nil
+	end
+
+	def downcase_email
+		self.email.downcase!
 	end
 
 	def is_password?(password)
