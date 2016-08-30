@@ -1,6 +1,6 @@
 import { browserHistory } from 'react-router';
 
-import SessionApi from 'utilities/api/session';
+import sessionApi from 'utilities/api/session';
 import { receiveUser, removeUser } from 'actions/user';
 
 const createSession = (api, store, action) => {

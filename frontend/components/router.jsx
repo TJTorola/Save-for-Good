@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './app';
-import Login from './login';
+import Login from './login/container';
 import Register from './register';
 
 export default () => (
