@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Src</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Src</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 
-  <% if logged_in? %>
+	<meta name="logo-src" content="<%= asset_path "logo.svg" %>"
+	<% if logged_in? %>
 		<meta name="current-user" 
 			content="<%= render 'api/sessions/show.json.jbuilder' if logged_in? %>">
 	<% end %>
 </head>
-<body>
+<body class="bg-gray">
 
 	<%= yield %>
 

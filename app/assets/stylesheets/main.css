@@ -1,0 +1,49 @@
+* {
+	font-family: "Trebuchet MS","Helvetica","Arial","sans-serif"; }
+
+.bg-gray {
+	background: #EEE; }
+.bg-white {
+	background: #FFF; }
+
+header {
+	position: static;
+	box-shadow: 0 1rem 0 0 rgba(0,0,0,0.2);
+}
+
+header a {
+	height: 5rem;
+	box-sizing: border-box;
+	display: inline-block;
+	color: black;
+	line-height: 5rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+header a:hover {
+	color: #F75C03;
+	border-bottom: .5rem solid #F75C03; }
+
+
+.button.orange,
+button.orange,
+input[type="submit"].orange,
+input[type="reset"].orange,
+input[type="button"].orange {
+  border-color: #F8A10C;
+  color: #F8A10C; }
+.button.orange:hover,
+button.orange:hover,
+input[type="submit"].orange:hover,
+input[type="reset"].orange:hover,
+input[type="button"].orange:hover,
+.button.orange:focus,
+button.orange:focus,
+input[type="submit"].orange:focus,
+input[type="reset"].orange:focus,
+input[type="button"].orange:focus {
+  border-color: #F75C03;
+  color: #F75C03; }

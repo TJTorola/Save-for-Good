@@ -1,32 +1,45 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
-const welcome = (user) => {
-	if (user) {
-		return <h1>Welcome { user.firstName }</h1>;
-	} else {
-		return <h1>Welcome to Save for Good!</h1>;
-	}
+
+const logoSrc = () => {
+	let meta = document.querySelector('meta[name="logo-src"]');
+	return meta.getAttribute('content');
 }
 
-const logoffLink = logoff => (
-	<ul>
-		<li>
-			<span class="link" onClick={ logoff }>Logoff</span>
-		</li>
-	</ul>
+const go = path => () => {
+	browserHistory.push(path);
+}
+
+const logoffLink = (logoff, user) => (
+	<section>
+		<Link to="settings">{ user.firstName } { user.lastName }</Link>
+		<button className="orange" onClick={ logoff }>Logoff</button>
+	</section>
 )
 
 const loginLinks = (
-	<ul>
-		<li><Link to='login'>Login</Link></li>
-		<li><Link to='register'>Register</Link></li>
-	</ul>
+	<section>
+		<Link to="register">Register</Link>
+		<button className="orange" onClick={ go('login') }>
+			Login
+		</button>
+	</section>
 )
 
 export default ({ user, logoff }) => (
-	<header>
-		{ user ? logoffLink(logoff) : loginLinks }
-		{ welcome(user) }
+	<header className="bg-white u-full-width">
+		<nav className="container u-height-lg flex f-between">
+			<section>
+				<Link to="entrepreneurs">Entrepreneurs</Link>
+				<Link to="portfolio">Portfolio</Link>
+			</section>
+
+			<img src={ logoSrc() } 
+				alt="Save for Good Logo"
+				onClick={ go('') } />
+
+			{ user ? logoffLink(logoff, user) : loginLinks }
+		</nav>
 	</header>
 );
