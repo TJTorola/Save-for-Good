@@ -1,6 +1,6 @@
 import ajax from './ajax';
 
-const sessionApi = dispatch => {
+export default dispatch => {
 	post: user => ajax({
 		method: 'POST',
 		url: '/api/session',
@@ -11,6 +11,4 @@ const sessionApi = dispatch => {
 		method: 'DELETE',
 		url: '/api/session'
 	}, dispatch)
-}
-
-export default sessionApi;
+};
