@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
 	after_initialize :ensure_session_token
 
 	validates :password_digest, presence: true
-	validates :password, length: { minumum: 8, allow_nil: true }
-	validates :session_token, :username, :email, presence: true, uniqueness: true
+	validates :password, length: { minimum: 8, allow_nil: true }
+	validates :session_token, :name, :email, presence: true, uniqueness: true
 
 	def self.find_by_credentials(email, password)
 		user = User.find_by(email: email)
