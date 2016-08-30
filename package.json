@@ -2,7 +2,7 @@
 	"name": "save-for-good",
 	"version": "0.0.1",
 	"description": "",
-	"main": "frontend/entry.js",
+	"main": "frontend/entry.jsx",
 	"directories": {
 		"doc": "docs",
 		"test": "test"
