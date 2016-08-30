@@ -1,9 +1,6 @@
 import { applyMiddleware } from 'redux';
 
-import userMiddleware    from 'middleware/user';
-import sessionMiddleware from 'middleware/session';
+import user    from 'middleware/user';
+import session from 'middleware/session';
 
-export default applyMiddleware(
-	userMiddleware,
-	sessionMiddleware
-);
+export default applyMiddleware( user, session );
