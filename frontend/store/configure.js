@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 
-import reducers from './reducersCombiner';
+import reducers   from './reducersCombiner';
 import middleware from './middlewareCombiner';
 
 let configureStore = (preloadedState = {}) => {
