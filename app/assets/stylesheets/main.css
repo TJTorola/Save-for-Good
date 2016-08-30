@@ -6,6 +6,26 @@
 .bg-white {
 	background: #FFF; }
 
+.button.orange,
+button.orange,
+input[type="submit"].orange,
+input[type="reset"].orange,
+input[type="button"].orange {
+  border-color: #F8A10C;
+  color: #F8A10C; }
+.button.orange:hover,
+button.orange:hover,
+input[type="submit"].orange:hover,
+input[type="reset"].orange:hover,
+input[type="button"].orange:hover,
+.button.orange:focus,
+button.orange:focus,
+input[type="submit"].orange:focus,
+input[type="reset"].orange:focus,
+input[type="button"].orange:focus {
+  border-color: #F75C03;
+  color: #F75C03; }
+
 header {
 	position: static;
 	box-shadow: 0 1rem 0 0 rgba(0,0,0,0.2);
@@ -27,23 +47,34 @@ header a:hover {
 	color: #F75C03;
 	border-bottom: .5rem solid #F75C03; }
 
+#errors {
+	position: fixed;
+	width: 35rem;
+	right: 1.5rem;
+	top: 7rem;
+}
 
-.button.orange,
-button.orange,
-input[type="submit"].orange,
-input[type="reset"].orange,
-input[type="button"].orange {
-  border-color: #F8A10C;
-  color: #F8A10C; }
-.button.orange:hover,
-button.orange:hover,
-input[type="submit"].orange:hover,
-input[type="reset"].orange:hover,
-input[type="button"].orange:hover,
-.button.orange:focus,
-button.orange:focus,
-input[type="submit"].orange:focus,
-input[type="reset"].orange:focus,
-input[type="button"].orange:focus {
-  border-color: #F75C03;
-  color: #F75C03; }
+#errors div {
+	background: white;
+	box-shadow: 1rem 1rem 0 0 rgba(0,0,0,0.2);
+}
+
+#errors div:hover {
+	cursor: pointer;
+}
+
+#errors div:hover .fa-times {
+	color: #F75C03;
+}
+
+#errors h1 {
+  font-size: 2.5rem;
+  padding: .5rem;
+  border-bottom: thin lightgray solid;
+  color: black;
+  margin-bottom: 0;
+}
+
+#errors p {
+	padding: 1rem;
+}

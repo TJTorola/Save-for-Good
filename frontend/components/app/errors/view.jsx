@@ -2,14 +2,17 @@ import React from 'react';
 
 const listItems = errors => errors.map(error => {
 	return (
-		<li key={ error.id }>
-			{ error.message }
-		</li>
+		<div key={ error.id }>
+			<h1>Error</h1>
+			<p>
+				{ error.message }
+			</p>
+		</div>
 	);
 });
 
 export default ({ errors }) => (
-	<ul>
+	<section id="errors">
 		{ listItems(errors) }
-	</ul>
+	</section>
 );
