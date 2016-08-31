@@ -1,18 +1,33 @@
 import React from 'react';
 
-const listItems = errors => errors.map(error => {
-	return (
-		<div key={ error.id }>
-			<h1>Error</h1>
-			<p>
-				{ error.message }
-			</p>
-		</div>
-	);
-});
+class Errors extends React.Component {
+	constructor(props) {
+		super(props);
+		this.listItems = this.listItems.bind(this)
+	}
 
-export default ({ errors }) => (
-	<section id="errors">
-		{ listItems(errors) }
-	</section>
-);
+	dismiss(id) {
+		return () => this.props.removeError(id);
+	}
+
+	listItems() {
+		return this.props.errors.map(error => (
+			<div key={ error.id } onClick={ this.dismiss(error.id) } className="shadow">
+				<h1>Error <i className="fa fa-times u-pull-right"></i></h1>
+				<p>
+					{ error.message }
+				</p>
+			</div>
+		));
+	}
+
+	render () {
+		return (
+			<section id="errors">
+				{ this.listItems() }
+			</section>
+		)
+	}
+}
+
+export default Errors

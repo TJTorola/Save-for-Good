@@ -17,22 +17,24 @@ const submit = createUser => event => {
 };
 
 export default ({ createUser }) => (
-	<div>
-		<h2>Register:</h2>
-		<form onSubmit={ submit(createUser) }>
+	<section className="card">
+		<h1>Register</h1>
+		<form className="u-mar-no" onSubmit={ submit(createUser) }>
 			<label htmlFor="email">Email:</label>
-			<input type="email" id="email" />
+			<input type="email" id="email" className="u-full-width" />
 
 			<label htmlFor="first-name">First Name:</label>
-			<input type="text" id="first-name" />
+			<input type="text" id="first-name" className="u-full-width" />
 
 			<label htmlFor="last-name">Last Name:</label>
-			<input type="text" id="last-name" />
+			<input type="text" id="last-name" className="u-full-width" />
 
 			<label htmlFor="password">Password:</label>
-			<input type="password" id="password"/>
+			<input type="password" id="password" className="u-full-width" />
 
-			<button type="submit">Submit</button>
+			<hr />
+
+			<button type="submit" className="u-full-width">Submit Registration</button>
 		</form>
-	</div>
+	</section>
 );

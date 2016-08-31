@@ -8,6 +8,8 @@ export default ({ children }) => (
 		<Header />
 		<Errors />
 		
-		{ children }
+		<content className="u-full-width">
+			<div className="container">{ children }</div>
+		</content>
 	</div>
 );

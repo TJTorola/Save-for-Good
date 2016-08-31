@@ -15,16 +15,18 @@ const submit = createSession => event => {
 };
 
 export default ({ createSession }) => (
-	<div>
-		<h2>Login:</h2>
-		<form onSubmit={ submit(createSession) }>
+	<section className="card">
+		<h1>Login</h1>
+		<form className="u-mar-no" onSubmit={ submit(createSession) }>
 			<label htmlFor="email">Email:</label>
-			<input type="email" id="email" />
+			<input type="email" id="email" className="u-full-width" />
 
 			<label htmlFor="password">Password:</label>
-			<input type="password" id="password"/>
+			<input type="password" id="password" className="u-full-width" />
 
-			<button type="submit">Submit</button>
+			<hr />
+
+			<button type="submit" className="u-full-width">Login</button>
 		</form>
-	</div>
+	</section>
 );
