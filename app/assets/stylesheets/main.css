@@ -27,8 +27,8 @@ input[type="button"].orange:focus {
 	color: #F75C03; }
 
 header {
-	z-index: 2;
 	position: fixed;
+	z-index: 3;
 	box-shadow: 0 1rem 0 0 rgba(0,0,0,0.2);
 }
 
@@ -50,11 +50,10 @@ header a:hover {
 
 content {
 	position: absolute;
-	margin-top: 9rem;
+	margin-top: 7rem;
 }
 
 #errors {
-	z-index: 4;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -86,16 +85,14 @@ content {
 }
 
 #errors h1 {
-	background: #F55D3E;
 	font-size: 2.5rem;
 	padding: .5rem;
-	padding-left: 1rem;
-	color: white;
+	border-bottom: thin lightgray solid;
+	color: black;
 	margin-bottom: 0;
 }
 
 #errors p {
-	background: #ffe9e5;
 	padding: 1rem;
 }
 
@@ -106,11 +103,95 @@ content {
 	box-shadow: .5rem .5rem 0 0 rgba(0,0,0,0.2);
 }
 
-.shadow {
-	box-shadow: .5rem .5rem 0 0 rgba(0,0,0,0.2);
+/* ENTREPRENEURS */
+.entrepreneur {
+	margin-top: 3rem;
 }
 
-.shadow:after {
-	content: "";
-	box-shadow: .5rem .5rem 0 0 rgba(0,0,0,0.2);
+.entrepreneur .pic {
+	padding: 1rem;
+	width: 30rem;
+	height: 30rem;
+	margin-right: 1rem;
 }
+
+.entrepreneur img {
+	width: 100%;
+	height: auto;
+}
+
+.entrepreneur h1 {
+	background: #f8a10d;
+	font-size: 3.0rem;
+	padding: 1rem;
+	color: white;
+}
+
+.entrepreneur p {
+	padding: 2rem;
+}
+
+.entrepreneur .description {
+	padding: 0;
+	padding-top: 2rem;
+	height: 20rem;
+}
+
+.buttons {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.card-button:hover {
+	cursor: pointer;
+}
+
+.card-button:active {
+	position: relative;
+	top: .3rem;
+	box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
+}
+
+.entrepreneur .invest {
+	color: white;
+	background: #3a9600;
+	padding: 1rem;
+	text-align: center;
+	margin-right: 1rem;
+}
+
+.entrepreneur .invest:hover {
+	background: #4bbd03;
+}
+
+.entrepreneur .learn-more:hover {
+	background: #707070;
+}
+
+.entrepreneur .learn-more {
+	color: white;
+	background: #464646;
+	padding: 1rem;
+	text-align: center;
+	width: 20rem;
+}
+
+.entrepreneur .meter {
+	padding: .5rem;
+	height: 2.5rem;
+}
+
+.entrepreneur .fill {
+	display: inline-block;
+	background: #3a9600;
+	position: relative;
+	height: 2.5rem;
+	width: 75%;
+}
+
+.entrepreneur .status {
+	color: white;
+	position: absolute;
+	right: .5rem;
+}
+

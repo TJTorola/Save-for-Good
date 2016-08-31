@@ -1,16 +1,16 @@
 import React from 'react';
+import Loan from './loan'
 
 const renderLoans = (loans) => loans.map(loan => (
-	<li>{ loan.entrepreneur.fullName }</li>
+	<Loan loan={ loan } />
 ));
 
-export default ({ loans }) => {
-	// debugger
-	return (
-	<section className="card">
-		<h1>Entrepreneurs</h1>
-		<ul>
-			{ renderLoans(loans) }
-		</ul>
-	</section>
-)};
+export default ({ loans }) => (
+	<div>
+		<section className="card">
+			<h1>Entrepreneurs</h1>
+		</section>
+
+		{ renderLoans(loans) }
+	</div>
+);
