@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830161222) do
+ActiveRecord::Schema.define(version: 20160831170427) do
+
+  create_table "loans", force: :cascade do |t|
+    t.integer  "user_id",                           null: false
+    t.string   "title",                             null: false
+    t.text     "description",                       null: false
+    t.integer  "amount",                            null: false
+    t.integer  "status",                default: 0
+    t.datetime "end_date",                          null: false
+    t.integer  "loan_length",                       null: false
+    t.integer  "payment_period_length",             null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  add_index "loans", ["user_id"], name: "index_loans_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
