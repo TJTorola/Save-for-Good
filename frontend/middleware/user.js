@@ -1,3 +1,5 @@
+import { browserHistory } from 'react-router';
+
 import userApi from 'utilities/api/user';
 import { receiveUser } from 'actions/user';
 
@@ -6,6 +8,7 @@ const createUser = (api, store, action) => {
 
 	promise.done(response => {
 		store.dispatch(receiveUser(response.user));
+		browserHistory.push('portfolio');
 	});
 }
 

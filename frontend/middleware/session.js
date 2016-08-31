@@ -8,7 +8,7 @@ const createSession = (api, store, action) => {
 
 	promise.done(response => {
 		store.dispatch(receiveUser(response.user));
-		browserHistory.push('/');
+		browserHistory.push('portfolio');
 	});
 }
 
@@ -17,6 +17,7 @@ const destroySession = (api, store) => {
 
 	promise.done(() => {
 		store.dispatch(removeUser());
+		browserHistory.push('login');
 	});
 }
 
