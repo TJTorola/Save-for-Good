@@ -3,12 +3,16 @@
 	"version": "0.0.1",
 	"description": "",
 	"main": "frontend/entry.jsx",
+	"engines": {
+		"node": "6.2.2",
+		"npm": "3.9.5"
+	},
 	"directories": {
 		"doc": "docs",
 		"test": "test"
 	},
 	"scripts": {
-		"build": "webpack --config ./webpack.prod.config.js --progress --colors",
+		"postinstall": "./node_modules/.bin/webpack",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
