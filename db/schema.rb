@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20160831170427) do
 
   create_table "loans", force: :cascade do |t|
     t.integer  "user_id",                           null: false
-    t.string   "title",                             null: false
     t.text     "description",                       null: false
     t.integer  "amount",                            null: false
     t.integer  "status",                default: 0

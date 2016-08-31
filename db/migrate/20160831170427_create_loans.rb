@@ -2,7 +2,6 @@ class CreateLoans < ActiveRecord::Migration
 	def change
 		create_table :loans do |t|
 			t.integer :user_id, null: false
-			t.string :title, null: false
 			t.text :description, null: false
 			t.integer :amount, null: false
 			t.integer :status, default: 0
