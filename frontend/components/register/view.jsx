@@ -21,16 +21,16 @@ export default ({ createUser }) => (
 		<h1>Register</h1>
 		<form className="u-mar-no" onSubmit={ submit(createUser) }>
 			<label htmlFor="email">Email:</label>
-			<input type="email" id="email" className="u-full-width" />
+			<input type="email" id="email" name="email" className="u-full-width" />
+
+			<label htmlFor="password">Password:</label>
+			<input type="password" id="password" className="u-full-width" />
 
 			<label htmlFor="first-name">First Name:</label>
 			<input type="text" id="first-name" className="u-full-width" />
 
 			<label htmlFor="last-name">Last Name:</label>
 			<input type="text" id="last-name" className="u-full-width" />
-
-			<label htmlFor="password">Password:</label>
-			<input type="password" id="password" className="u-full-width" />
 
 			<hr />
 
