@@ -5,3 +5,43 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create!({
+	email: 'tyler@tjt.codes',
+	password: 'password',
+	first_name: 'Tyler',
+	last_name: 'Torola'
+});
+
+9.times do
+	first_name = Faker::Name.first_name
+	last_name = Faker::Name.last_name
+	email = Faker::Internet.free_email("#{first_name} #{last_name}")
+
+	User.create!({
+		email: email,
+		password: Faker::Internet.password,
+		first_name: first_name,
+		last_name: last_name
+	});
+end
+
+10.times do
+	first_name = Faker::Name.first_name
+	last_name = Faker::Name.last_name
+	email = Faker::Internet.free_email("#{first_name} #{last_name}")
+	country = Faker::Address.country
+	city = Faker::Address.city
+
+	location = "#{country}, #{city}"
+	about = Faker::Lorem.paragraphs(rand(3) + 2).join('\n')
+
+	User.create!({
+		email: email,
+		password: Faker::Internet.password,
+		first_name: first_name,
+		last_name: last_name,
+		location: location,
+		about: about
+	});
+end
