@@ -7,10 +7,9 @@
 	<script src="https://use.fontawesome.com/0bc397a095.js"></script>
 	<%= csrf_meta_tags %>
 
-	<meta name="logo-src" content="<%= asset_path "logo.svg" %>"
+	<meta name="logo-src" content="<%= asset_path "logo.svg" %>">
 	<% if logged_in? %>
-		<meta name="current-user" 
-			content="<%= render 'api/sessions/show.json.jbuilder' if logged_in? %>">
+		<meta name="current-user" content="<%= render 'api/sessions/show.json.jbuilder' %>">
 	<% end %>
 </head>
 <body class="bg-gray">

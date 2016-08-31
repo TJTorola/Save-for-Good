@@ -8,7 +8,7 @@ const store = configureStore();
 
 const Root = () => (
 	<Provider store={ store }>
-		<Router />
+		<Router store={ store }/>
 	</Provider>
 );
 
