@@ -3,11 +3,12 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { parseJSON } from 'jquery';
 
 import { receiveUser } from 'actions/user';
+import { requestLoans } from 'actions/loans';
 
 import App           from './app/view';
 import Login         from './login/container';
 import Register      from './register/container';
-import Entrepreneurs from './entrepreneurs/view';
+import Entrepreneurs from './entrepreneurs/container';
 import Portfolio     from './portfolio/view';
 
 const bootstrapUser = store => () => {
@@ -19,12 +20,18 @@ const bootstrapUser = store => () => {
 	}
 }
 
+const loadLoans = store => () => {
+	store.dispatch(requestLoans());
+}
+
 export default ({ store }) => (
 	<Router history={ browserHistory }>
-		<Route path="/" component={ App } onEnter={ bootstrapUser(store) }>
+		<Route path="/" component={ App } 
+			onEnter={ bootstrapUser(store) }>
 			<Route path="login" component={ Login } />
 			<Route path="register" component={ Register } />
-			<Route path="entrepreneurs" component={ Entrepreneurs } />
+			<Route path="entrepreneurs" component={ Entrepreneurs } 
+				onEnter={ loadLoans(store) } />
 			<Route path="portfolio" component={ Portfolio } />
 		</Route>
 	</Router>
