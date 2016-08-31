@@ -4,10 +4,11 @@ import { parseJSON } from 'jquery';
 
 import { receiveUser } from 'actions/user';
 
-import App       from './app/view';
-import Login     from './login/container';
-import Register  from './register/container';
-import Portfolio from './portfolio/view';
+import App           from './app/view';
+import Login         from './login/container';
+import Register      from './register/container';
+import Entrepreneurs from './entrepreneurs/view';
+import Portfolio     from './portfolio/view';
 
 const bootstrapUser = store => () => {
 	let user = document.querySelector('meta[name="current-user"]');
@@ -23,6 +24,7 @@ export default ({ store }) => (
 		<Route path="/" component={ App } onEnter={ bootstrapUser(store) }>
 			<Route path="login" component={ Login } />
 			<Route path="register" component={ Register } />
+			<Route path="entrepreneurs" component={ Entrepreneurs } />
 			<Route path="portfolio" component={ Portfolio } />
 		</Route>
 	</Router>
