@@ -8,13 +8,13 @@ export default ({ loan }) => (
 
 	<div className="f-grow">
 		<div className="card description">
-			<h1>{ loan.entrepreneur.fullName } - ${ loan.amount / 100 }</h1>
+			<h1>{ loan.entrepreneur.name } - ${ loan.amount / 100 }</h1>
 			<p>{ loan.description }</p>
 		</div>
 
 		<div className="buttons flex">
 			<div className="card card-button invest f-grow">
-				Invest in { loan.entrepreneur.fullName }
+				Invest in { loan.entrepreneur.name }
 			</div>
 
 			<div className="card card-button learn-more">

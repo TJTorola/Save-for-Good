@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 	before_save :downcase_email
 
 	validates :password, length: { minimum: 8, allow_nil: true }
-	validates :password_digest, :first_name, :last_name, presence: true
+	validates :password_digest, :name, presence: true
 	validates :session_token, :email, presence: true, uniqueness: true
 
 	def self.find_by_credentials(params)

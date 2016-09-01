@@ -110,7 +110,7 @@ content {
 
 .entrepreneur .pic {
 	padding: 1rem;
-	width: 30rem;
+	min-width: 30rem;
 	height: 30rem;
 	margin-right: 1rem;
 }
