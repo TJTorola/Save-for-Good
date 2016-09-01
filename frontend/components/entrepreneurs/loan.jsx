@@ -20,7 +20,7 @@ export default ({ loan }) => (
 		</div>
 
 		<div className="buttons flex">
-			<div className="card card-button invest f-grow">
+			<div className="card card-button green f-grow">
 				{ icons.s4g } Invest in { loan.entrepreneur.name }
 			</div>
 

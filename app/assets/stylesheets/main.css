@@ -172,6 +172,8 @@ content {
 	box-sizing: border-box;
 	border-left: 3.7rem solid rgba(0,0,0,.1);
 	position: relative;
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
 .card-button .svg {
@@ -195,12 +197,12 @@ content {
 	box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
 }
 
-.entrepreneur .invest {
+.card-button.green {
 	background: #3a9600;
 	margin-right: 1rem;
 }
 
-.entrepreneur .invest:hover {
+.card-button.green:hover {
 	background: #4bbd03;
 }
 
@@ -232,3 +234,23 @@ content {
 	right: .5rem;
 }
 
+.LoanHead-img {
+	padding: 1rem;
+	max-width: 30rem;
+	margin-right: 1rem;
+}
+
+.LoanPitch {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: white;
+  width: 100%;
+  box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
+  padding: 3rem;
+}
+
+.LoanPitch .card-button {
+	position: relative;
+	left: -5rem;
+	width: 30rem;
+}

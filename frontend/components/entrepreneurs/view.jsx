@@ -6,7 +6,7 @@ const renderLoans = (loans) => loans.map(loan => (
 ));
 
 export default ({ loans }) => (
-	<div>
+	<div className="container">
 		<section className="card">
 			<h1>Entrepreneurs</h1>
 		</section>

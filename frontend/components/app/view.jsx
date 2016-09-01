@@ -10,7 +10,7 @@ export default ({ children }) => (
 		<Errors />
 		
 		<content className="u-full-width">
-			<div className="container">{ children }</div>
+			{ children }
 		</content>
 	</div>
 );
