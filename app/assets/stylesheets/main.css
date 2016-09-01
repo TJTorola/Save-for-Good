@@ -26,10 +26,17 @@ input[type="button"].orange:focus {
 	border-color: #F75C03;
 	color: #F75C03; }
 
+.header-shadow {
+  width: 100%;
+  height: 5.5rem;
+  position: fixed;
+  box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
+}
+
 header {
 	position: fixed;
 	z-index: 3;
-	box-shadow: 0 1rem 0 0 rgba(0,0,0,0.2);
+	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
 }
 
 header a {
@@ -62,6 +69,7 @@ content {
 	width: 35rem;
 	right: 1.5rem;
 	top: 7rem;
+	z-index: 4;
 }
 
 #errors div {
@@ -84,15 +92,23 @@ content {
 	color: #F75C03;
 }
 
+#errors div:active {
+	position: relative;
+	top: .3rem;
+	box-shadow: .7rem .7rem 0 0 rgba(0,0,0,0.2);
+}
+
 #errors h1 {
+	background: #F55D3E;
 	font-size: 2.5rem;
 	padding: .5rem;
-	border-bottom: thin lightgray solid;
-	color: black;
+	padding-left: 1rem;
+	color: white;
 	margin-bottom: 0;
 }
 
 #errors p {
+	background: #ffe9e5;
 	padding: 1rem;
 }
 

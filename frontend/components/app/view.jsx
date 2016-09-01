@@ -5,6 +5,7 @@ import Errors from './errors/container';
 
 export default ({ children }) => (
 	<div>
+		<div className="header-shadow" />
 		<Header />
 		<Errors />
 		
