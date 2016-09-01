@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link, browserHistory } from 'react-router';
-import Icon from 'utilities/icons';
+import { Link } from 'react-router';
 
-const go = path => () => browserHistory.push(path);
+import { go, Icon } from 'utilities/helper'
 
 const logoffLink = (logoff, user) => (
 	<section>
@@ -14,7 +13,7 @@ const logoffLink = (logoff, user) => (
 const loginLinks = (
 	<section>
 		<Link to="/register">Register</Link>
-		<button className="orange" onClick={ go('login') }>
+		<button className="orange">
 			Login
 		</button>
 	</section>

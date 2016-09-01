@@ -1,10 +1,6 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
 
-import * as icons from 'utilities/icons';
-
-const imgUrl = loan => `//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`;
-const go = path => () => browserHistory.push(path);
+import { Icon, go, imgUrl } from 'utilities/helper';
 const show = id => go(`entrepreneur/${id}`);
 
 export default ({ loan }) => (
@@ -21,11 +17,11 @@ export default ({ loan }) => (
 
 		<div className="buttons flex">
 			<div className="card card-button green f-grow">
-				{ icons.s4g } Invest in { loan.entrepreneur.name }
+				<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
 			</div>
 
 			<div className="card card-button learn-more" onClick={ show(loan.id) }>
-				{ icons.plus } Learn More
+				<Icon i="plus"/> Learn More
 			</div>
 		</div>
 

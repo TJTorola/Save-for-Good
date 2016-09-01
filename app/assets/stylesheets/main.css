@@ -202,14 +202,11 @@ content {
 	padding-right: 3rem;
 }
 
-.card-button .svg {
+.card-button svg {
 	position: absolute;
-	left: -2.85rem;
-	top: .9rem;
-	height: 1.7rem;
-}
-
-.card-button .svg * {
+	left: -2.9rem;
+	top: .6rem;
+	height: 2.4rem;
 	fill: white;
 }
 
@@ -272,22 +269,22 @@ content {
 
 .LoanHead-map {
 	height: 100%;
-  padding: 0;
-  padding-top: 1rem;
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
+	padding: 0;
+	padding-top: 1rem;
+	background-position: center;
+	background-size: cover;
+	box-sizing: border-box;
 }
 
 .LoanHead-map h1 {
-  background: rgba(255,255,255,.5);
-  padding: 1rem;
+	background: rgba(255,255,255,.5);
+	padding: 1rem;
 }
 
 .LoanHead-map p {
-  background: rgba(255,255,255,.5);
-  margin-top: 14rem;
-  padding: 1rem;
+	background: rgba(255,255,255,.5);
+	margin-top: 14rem;
+	padding: 1rem;
 }
 
 .LoanPitch {
