@@ -4,14 +4,14 @@ const userFromEvent = e => {
 	return {
 		email: e.target.querySelector("#email").value,
 		password: e.target.querySelector("#password").value,
-		first_name: e.target.querySelector("#first-name").value,
-		last_name: e.target.querySelector("#last-name").value,
+		name: e.target.querySelector("#name").value,
 	}
 }
 
 const submit = createUser => event => {
 	event.preventDefault();
 	let user = userFromEvent(event);
+	debugger
 
 	createUser(user);
 };
@@ -26,11 +26,8 @@ export default ({ createUser }) => (
 			<label htmlFor="password">Password:</label>
 			<input type="password" id="password" className="u-full-width" />
 
-			<label htmlFor="first-name">First Name:</label>
-			<input type="text" id="first-name" className="u-full-width" />
-
-			<label htmlFor="last-name">Last Name:</label>
-			<input type="text" id="last-name" className="u-full-width" />
+			<label htmlFor="name">Name:</label>
+			<input type="text" id="name" className="u-full-width" />
 
 			<hr />
 

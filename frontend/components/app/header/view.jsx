@@ -13,7 +13,7 @@ const go = path => () => {
 
 const logoffLink = (logoff, user) => (
 	<section>
-		<Link to="settings">{ user.firstName } { user.lastName }</Link>
+		<Link to="settings">{ user.name }</Link>
 		<button className="orange" onClick={ logoff }>Logoff</button>
 	</section>
 )
