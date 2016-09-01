@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 
-import Entrepreneurs from './view';
-import { requestLoans } from 'actions/loans';
+import Entrepreneur from './view';
+import { requestLoan } from 'actions/loan';
 
 const mapStateToProps = state => ({
-	loans: state.loans
+	loan: state.loan
 });
 
 const mapDispatchToProps = dispatch => ({
-	getLoans: user => dispatch(requestLoans())
+	getLoan: user => dispatch(requestLoan())
 });
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Entrepreneurs);
+)(Entrepreneur);

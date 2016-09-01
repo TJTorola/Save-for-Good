@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	getLoans: user => dispatch(requestLoans())
+	getLoans: id => dispatch(requestLoans(id))
 });
 
 export default connect(

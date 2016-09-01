@@ -9,6 +9,7 @@ import App           from './app/view';
 import Login         from './login/container';
 import Register      from './register/container';
 import Entrepreneurs from './entrepreneurs/container';
+import Entrepreneur  from './entrepreneur/container';
 import Portfolio     from './portfolio/view';
 
 const bootstrapUser = store => () => {
@@ -34,6 +35,7 @@ export default ({ store }) => (
 			<Route path="register" component={ Register } />
 			<Route path="entrepreneurs" component={ Entrepreneurs } 
 				onEnter={ loadLoans(store) } />
+			<Route path="entrepreneur/:id" component={ Entrepreneur } />
 			<Route path="portfolio" component={ Portfolio } />
 		</Route>
 	</Router>

@@ -1,8 +1,11 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
 
 import * as icons from 'utilities/icons';
 
 const imgUrl = loan => `//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`;
+const go = path => () => browserHistory.push(path);
+const show = id => go(`entrepreneur/${id}`);
 
 export default ({ loan }) => (
 <section className="entrepreneur u-full-width flex">
@@ -21,7 +24,7 @@ export default ({ loan }) => (
 				{ icons.s4g } Invest in { loan.entrepreneur.name }
 			</div>
 
-			<div className="card card-button learn-more">
+			<div className="card card-button learn-more" onClick={ show(loan.id) }>
 				{ icons.plus } Learn More
 			</div>
 		</div>

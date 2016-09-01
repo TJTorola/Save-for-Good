@@ -6,10 +6,7 @@ const logoSrc = () => {
 	let meta = document.querySelector('meta[name="logo-src"]');
 	return meta.getAttribute('content');
 }
-
-const go = path => () => {
-	browserHistory.push(path);
-}
+const go = path => () => browserHistory.push(path);
 
 const logoffLink = (logoff, user) => (
 	<section>
