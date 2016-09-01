@@ -19,6 +19,8 @@ const loginLinks = (
 	</section>
 )
 
+const test = () => { console.log('here') }
+
 export default ({ user, logoff }) => (
 	<header className="bg-white u-full-width">
 		<nav className="container u-height-lg flex f-between">
@@ -27,7 +29,9 @@ export default ({ user, logoff }) => (
 				<Link to="/portfolio">Portfolio</Link>
 			</section>
 
-			<Icon i="s4g" onClick={ go('/') }/>
+			<div onClick={ go('/') } className="u-full-height">
+				<Icon i="s4g"/>
+			</div>
 
 			{ user ? logoffLink(logoff, user) : loginLinks }
 		</nav>

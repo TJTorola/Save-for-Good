@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, go, imgUrl } from 'utilities/helper';
+import { Icon, go, imgUrl, toCurrency } from 'utilities/helper';
 const show = id => go(`entrepreneur/${id}`);
 
 export default ({ loan }) => (
@@ -11,7 +11,7 @@ export default ({ loan }) => (
 
 	<div className="f-grow">
 		<div className="card description">
-			<h1>{ loan.entrepreneur.name } - ${ loan.amount / 100 }</h1>
+			<h1>{ loan.entrepreneur.name } - { toCurrency(loan.amount) }</h1>
 			<p>{ loan.description }</p>
 		</div>
 
