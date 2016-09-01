@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link, browserHistory } from 'react-router';
+import Icon from 'utilities/icons';
 
-
-const logoSrc = () => {
-	let meta = document.querySelector('meta[name="logo-src"]');
-	return meta.getAttribute('content');
-}
 const go = path => () => browserHistory.push(path);
 
 const logoffLink = (logoff, user) => (
@@ -32,9 +28,7 @@ export default ({ user, logoff }) => (
 				<Link to="/portfolio">Portfolio</Link>
 			</section>
 
-			<img src={ logoSrc() } 
-				alt="Save for Good Logo"
-				onClick={ go('/') } />
+			<Icon i="s4g" onClick={ go('/') }/>
 
 			{ user ? logoffLink(logoff, user) : loginLinks }
 		</nav>
