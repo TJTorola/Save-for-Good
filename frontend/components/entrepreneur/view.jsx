@@ -2,8 +2,13 @@ import React from 'react';
 
 import * as icons from 'utilities/icons';
 
+const toCurrency = amount => `$ ${(amount/100).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
+const nlToP = block => {
+	block = block.replace(/\n{2}/g, '&nbsp;</p><p>');
+	return block.replace(/\n/g, '&nbsp;<br />');
+}
 const imgUrl = loan => `//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`;
-const mapUrl = loc => `//maps.googleapis.com/maps/api/staticmap?center=${loc}&zoom=4&size=800x300&markers=color:red%7C${loc}&key=AIzaSyBmqYlVFpuSr2yWPh0ZPhP-I5GKGWnshjc`
+const mapUrl = loc => `//maps.googleapis.com/maps/api/staticmap?center=${loc}&zoom=4&size=800x400&markers=color:red%7C${loc}&key=AIzaSyBmqYlVFpuSr2yWPh0ZPhP-I5GKGWnshjc`
 const mapStyle = loc => ({
 	backgroundImage: `url('${mapUrl(loc)}')`
 });
@@ -28,7 +33,7 @@ export default ({ loan }) => {
 
 				<section className="LoanPitch">
 					<div className="container u-clearfix">
-						<h2>{ loan.amount / 100 }</h2>
+						<h2>{ toCurrency(loan.amount) }</h2>
 						<p>{ loan.description }</p>
 						<div className="card card-button green pull-right">
 							{ icons.s4g } Invest in { loan.entrepreneur.name }
@@ -43,11 +48,9 @@ export default ({ loan }) => {
 
 						<div className="LoanBody-about card">
 							<h1>About { loan.entrepreneur.name }:</h1>
-							<p>{ loan.entrepreneur.about }</p>
+							<p dangerouslySetInnerHTML={ {__html: nlToP(loan.entrepreneur.about) } } />
 						</div>
 					</section>
-
-					<section className="LoanFooter card"></section>
 				</div>
 			</div>
 		)

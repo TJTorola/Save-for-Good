@@ -55,6 +55,9 @@ header a:hover {
 	color: #F75C03;
 	border-bottom: .5rem solid #F75C03; }
 
+p {
+	text-indent: 2rem; }
+
 content {
 	position: absolute;
 	margin-top: 7rem;
