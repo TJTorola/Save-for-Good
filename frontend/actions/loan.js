@@ -1,5 +1,6 @@
-export const requestLoan = () => ({
-	type: "REQUEST_LOAN"
+export const requestLoan = id => ({
+	type: "REQUEST_LOAN",
+	id
 });
 
 export const receiveLoan = loan => ({

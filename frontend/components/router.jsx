@@ -4,6 +4,7 @@ import { parseJSON } from 'jquery';
 
 import { receiveUser } from 'actions/user';
 import { requestLoans } from 'actions/loans';
+import { requestLoan } from 'actions/loan';
 
 import App           from './app/view';
 import Login         from './login/container';
@@ -27,6 +28,10 @@ const loadLoans = store => () => {
 	}
 }
 
+const loadLoan = store => state => {
+	store.dispatch(requestLoan(state.params.id));
+}
+
 export default ({ store }) => (
 	<Router history={ browserHistory }>
 		<Route path="/" component={ App } 
@@ -35,7 +40,8 @@ export default ({ store }) => (
 			<Route path="register" component={ Register } />
 			<Route path="entrepreneurs" component={ Entrepreneurs } 
 				onEnter={ loadLoans(store) } />
-			<Route path="entrepreneur/:id" component={ Entrepreneur } />
+			<Route path="entrepreneur/:id" component={ Entrepreneur } 
+				onEnter={ loadLoan(store) } />
 			<Route path="portfolio" component={ Portfolio } />
 		</Route>
 	</Router>

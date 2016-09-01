@@ -2,7 +2,7 @@ import loanApi from 'utilities/api/loan';
 import { receiveLoan } from 'actions/loan';
 
 const requestLoan = (api, store, action) => {
-	let promise = api.get();
+	let promise = api.get(action.id);
 
 	promise.done(response => {
 		store.dispatch(receiveLoan(response.loan));

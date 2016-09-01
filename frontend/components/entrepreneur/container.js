@@ -7,9 +7,7 @@ const mapStateToProps = state => ({
 	loan: state.loan
 });
 
-const mapDispatchToProps = dispatch => ({
-	getLoan: user => dispatch(requestLoan())
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(
 	mapStateToProps,
