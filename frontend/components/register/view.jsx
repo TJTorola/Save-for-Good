@@ -18,8 +18,11 @@ const submit = createUser => event => {
 
 export default ({ createUser }) => (
 	<div className="container">
-		<section className="card">
+		<section className="card card-header">
 			<h1>Register</h1>
+		</section>
+
+		<section className="card">
 			<form className="u-mar-no" onSubmit={ submit(createUser) }>
 				<label htmlFor="email">Email:</label>
 				<input type="email" id="email" name="email" className="u-full-width" />

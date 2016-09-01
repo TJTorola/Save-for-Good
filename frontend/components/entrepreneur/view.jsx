@@ -3,6 +3,10 @@ import React from 'react';
 import * as icons from 'utilities/icons';
 
 const imgUrl = loan => `//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`;
+const mapUrl = loc => `//maps.googleapis.com/maps/api/staticmap?center=${loc}&zoom=4&size=800x300&markers=color:red%7C${loc}&key=AIzaSyBmqYlVFpuSr2yWPh0ZPhP-I5GKGWnshjc`
+const mapStyle = loc => ({
+	backgroundImage: `url('${mapUrl(loc)}')`
+});
 
 export default ({ loan }) => {
 	if (loan) {
@@ -14,8 +18,10 @@ export default ({ loan }) => {
 							<img src={ imgUrl(loan) } />
 						</div>
 						<div className="LoanHead-title card f-grow">
-							<h1>{ loan.entrepreneur.name }</h1>
-							<p>{ loan.entrepreneur.location }</p>
+							<div className="LoanHead-map" style={ mapStyle(loan.entrepreneur.location) }>
+								<h1>{ loan.entrepreneur.name }</h1>
+								<p>{ loan.entrepreneur.location }</p>
+							</div>
 						</div>
 					</section>
 				</div>
