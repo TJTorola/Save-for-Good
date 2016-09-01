@@ -2,7 +2,7 @@ import React from 'react';
 import Loan from './loan'
 
 const renderLoans = (loans) => loans.map(loan => (
-	<Loan loan={ loan } />
+	<Loan key={ loan.id } loan={ loan } />
 ));
 
 export default ({ loans }) => (

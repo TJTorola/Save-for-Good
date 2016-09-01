@@ -21,7 +21,9 @@ const bootstrapUser = store => () => {
 }
 
 const loadLoans = store => () => {
-	store.dispatch(requestLoans());
+	if (store.getState().loans.length === 0) {
+		store.dispatch(requestLoans());
+	}
 }
 
 export default ({ store }) => (

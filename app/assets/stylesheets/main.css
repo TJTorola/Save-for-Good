@@ -27,10 +27,10 @@ input[type="button"].orange:focus {
 	color: #F75C03; }
 
 .header-shadow {
-  width: 100%;
-  height: 5.5rem;
-  position: fixed;
-  box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
+	width: 100%;
+	height: 5.5rem;
+	position: fixed;
+	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
 }
 
 header {
@@ -158,6 +158,33 @@ content {
 	padding-bottom: 1rem;
 }
 
+.card-button {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+	color: white;
+	height: 3.7rem;
+	text-align: center;
+	font-size: 1.7rem;
+	padding: 0;
+	line-height: 3.7rem;
+	box-sizing: border-box;
+	border-left: 3.7rem solid rgba(0,0,0,.1);
+	position: relative;
+}
+
+.card-button .svg {
+	position: absolute;
+	left: -2.85rem;
+	top: .9rem;
+	height: 1.7rem;
+}
+
+.card-button .svg * {
+	fill: white;
+}
+
 .card-button:hover {
 	cursor: pointer;
 }
@@ -169,10 +196,7 @@ content {
 }
 
 .entrepreneur .invest {
-	color: white;
 	background: #3a9600;
-	padding: 1rem;
-	text-align: center;
 	margin-right: 1rem;
 }
 
@@ -185,10 +209,7 @@ content {
 }
 
 .entrepreneur .learn-more {
-	color: white;
 	background: #464646;
-	padding: 1rem;
-	text-align: center;
 	width: 20rem;
 }
 
