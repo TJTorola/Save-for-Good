@@ -1,9 +1,11 @@
 import React from 'react';
 
+const imgUrl = loan => `//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`;
+
 export default ({ loan }) => (
 <section className="entrepreneur u-full-width flex">
 	<div className="card pic">
-		<img src="img/0.jpeg" />
+		<img src={ imgUrl(loan) } />
 	</div>
 
 	<div className="f-grow">
