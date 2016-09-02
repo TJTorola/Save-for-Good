@@ -22,6 +22,7 @@ class Lightbox extends React.Component {
 
 	submit() {
 		this.addContribution();
+		this.props.hide();
 		go('/checkout')();
 	}
 
@@ -35,8 +36,8 @@ class Lightbox extends React.Component {
 	}
 
 	render() {
-		let { hide, styles, submit, add } = this;
-		let { loan, show } = this.props;
+		let { styles, submit, add } = this;
+		let { loan, show, hide } = this.props;
 
 		return (
 			<div style={ styles(show) }>
