@@ -262,6 +262,7 @@ content {
 	position: relative;
 	height: 2.5rem;
 	width: 75%;
+	box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
 }
 
 .entrepreneur .status {
