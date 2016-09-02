@@ -1,48 +1,31 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { parseJSON } from 'jquery';
-
-import { receiveUser } from 'actions/user';
-import { requestLoans } from 'actions/loans';
-import { requestLoan } from 'actions/loan';
 
 import App           from './app/view';
 import Login         from './login/container';
 import Register      from './register/container';
-import Entrepreneurs from './entrepreneurs/container';
-import Entrepreneur  from './entrepreneur/container';
+import Checkout      from './checkout/container';
 import Portfolio     from './portfolio/view';
+import Entrepreneur  from './entrepreneur/container';
+import Entrepreneurs from './entrepreneurs/container';
 
-const bootstrapUser = store => () => {
-	let user = document.querySelector('meta[name="current-user"]');
+import Bootstrapper  from 'utilities/bootstrapper';
 
-	if (user) {
-		let content = parseJSON(user.getAttribute('content'));
-		store.dispatch(receiveUser(content.user));
-	}
-}
+export default ({ store }) => {
+	let bootstrap = new Bootstrapper(store);
 
-const loadLoans = store => () => {
-	if (store.getState().loans.length === 0) {
-		store.dispatch(requestLoans());
-	}
-}
-
-const loadLoan = store => state => {
-	store.dispatch(requestLoan(state.params.id));
-}
-
-export default ({ store }) => (
+	return (
 	<Router history={ browserHistory }>
 		<Route path="/" component={ App } 
-			onEnter={ bootstrapUser(store) }>
+			onEnter={ bootstrap.user }>
 			<Route path="login" component={ Login } />
 			<Route path="register" component={ Register } />
 			<Route path="entrepreneurs" component={ Entrepreneurs } 
-				onEnter={ loadLoans(store) } />
+				onEnter={ bootstrap.loans } />
 			<Route path="entrepreneur/:id" component={ Entrepreneur } 
-				onEnter={ loadLoan(store) } />
+				onEnter={ bootstrap.loan } />
 			<Route path="portfolio" component={ Portfolio } />
+			<Route path="checkout" component={ Checkout } />
 		</Route>
 	</Router>
-);
+)};
