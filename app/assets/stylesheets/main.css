@@ -24,7 +24,7 @@ p {
 
 .Header {
 	position: fixed;
-	z-index: 3;
+	z-index: 2;
 	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
 }
 
@@ -336,4 +336,59 @@ p {
 .LoanBody-stats {
   min-width: 35rem;
   background: #e0e0e0;
+}
+
+/* Lightbox
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.Fade {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .9);
+	z-index: 1;
+}
+
+.Lightbox {
+	box-shadow: .5rem .5rem 0 0 rgba(0,0,0,0.2);
+	position: fixed;
+	text-align: center;
+	z-index: 3;
+	width: 60rem;
+	top: 50%;
+	left: 50%;
+	margin-top: -20rem;
+	margin-left: -30rem;
+}
+
+.Lightbox-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 3rem;
+}
+
+.Lightbox-close:hover {
+	fill: #F75C03;
+	cursor: pointer;
+}
+
+.Lightbox-toolbar {
+	display: flex;
+	position: fixed;
+	z-index: 3;
+	width: 66rem;
+	top: 50%;
+	left: 50%;
+	margin-top: 17rem;
+	margin-left: -30rem;
+}
+
+.Lightbox-continue {
+	width: 50%;
+}
+
+.Lightbox-checkout {
+	width: 50%;
 }
