@@ -1,7 +1,6 @@
 const defaultState = {
 	show: false,
-	amount: 0,
-	name: ""
+	loan: {}
 }
 
 export default (state = defaultState, action) => {
@@ -9,8 +8,7 @@ export default (state = defaultState, action) => {
 		case "SHOW_LIGHTBOX":
 			return {
 				show: true,
-				amount: action.amount,
-				name: action.name
+				loan: action.loan
 			};
 		case "HIDE_LIGHTBOX":
 			return defaultState;

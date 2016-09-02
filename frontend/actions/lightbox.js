@@ -1,7 +1,11 @@
 export const showLightbox = loan => ({
 	type: "SHOW_LIGHTBOX",
 	name: loan.entrepreneur.name,
-	amount: loan.amount
+	loan: {
+		id: loan.id,
+		amount: loan.amount,
+		name: loan.entrepreneur.name
+	}
 });
 
 export const hideLightbox = () => ({

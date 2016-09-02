@@ -5,5 +5,13 @@ import errors   from 'reducers/errors';
 import loans    from 'reducers/loans';
 import loan     from 'reducers/loan';
 import lightbox from 'reducers/lightbox';
+import checkout from 'reducers/checkout';
 
-export default combineReducers({ user, errors, loans, loan, lightbox });
+export default combineReducers({ 
+	user,
+	errors,
+	loans,
+	loan,
+	lightbox,
+	checkout
+});

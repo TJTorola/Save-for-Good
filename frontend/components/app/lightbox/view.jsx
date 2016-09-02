@@ -1,35 +1,71 @@
 import React from 'react';
 
-import { Icon, toCurrency } from 'utilities/helper';
+import { Icon, toCurrency, go } from 'utilities/helper';
 
-const styles = show => {
-	if (!show) { return { display: 'none' } };
-};
+class Lightbox extends React.Component {
+	constructor(props) {
+		super(props);
 
-export default ({ show, name, amount, hide }) => (
-	<div style={ styles(show) }>
-		<div className="Fade" onClick={ hide } />
-		<div className="Lightbox card">
-			<Icon className="Lightbox-close" onClick={ hide } i="times" />
-			<h1>Great!</h1>
-			<div>How much would you like to contribute?</div>
+		this.submit = this.submit.bind(this);
+		this.add = this.add.bind(this);
+	}
 
-			<h2>
-				{ toCurrency(amount) } remains to fill<br />
-				{ name }'s loan.
-			</h2>
+	addContribution() {
+		let amount = document.querySelector('#contribution');
+		amount = parseFloat(amount.value);
+		amount = parseInt(amount * 100);
 
-			<label htmlFor="contribution">Your Contribution:</label>
-			<input type="text" id="contribution" />
-		</div>
-		<div className="Lightbox-toolbar">
-			<div className="card-button green f-grow">
-				<Icon i="cart" /> Checkout
+		let loan = this.props.loan;
+
+		this.props.addContribution({ loan, amount });
+	}
+
+	submit() {
+		this.addContribution();
+		go('/checkout')();
+	}
+
+	add() {
+		this.addContribution();
+		this.props.hide();
+	}
+
+	styles(show) {
+		if (!show) { return { display: 'none' } };
+	}
+
+	render() {
+		let { hide, styles, submit, add } = this;
+		let { loan, show } = this.props;
+
+		return (
+			<div style={ styles(show) }>
+				<div className="Fade" onClick={ hide } />
+				<div className="Lightbox card">
+					<Icon className="Lightbox-close" onClick={ hide } i="times" />
+					<h1>Great!</h1>
+					<div>How much would you like to contribute?</div>
+
+					<h2>
+						{ toCurrency(loan.amount) } remains to fill<br />
+						{ loan.name }'s loan.
+					</h2>
+
+					<label htmlFor="contribution">Your Contribution:</label>
+					<input type="text" id="contribution" defaultValue={ 25.00 } />
+				</div>
+				<div className="Lightbox-toolbar">
+					<div className="card-button green f-grow" onClick={ submit }>
+						<Icon i="cart" /> Checkout
+					</div>
+
+					<div className="card-button black f-grow" onClick={ add }>
+						<Icon i="plus" /> Add and Continue
+					</div>
+				</div>
 			</div>
+		);
+	}
+}
 
-			<div className="card-button black f-grow">
-				<Icon i="plus" /> Add and Continue
-			</div>
-		</div>
-	</div>
-);
+export default Lightbox;
