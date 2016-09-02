@@ -1,26 +1,22 @@
 import React from 'react';
 
-import { Icon } from 'utilities/helper';
-
-const hideLightbox = () => {
-	console.log('hidden!');
-}
+import { Icon, toCurrency } from 'utilities/helper';
 
 const styles = show => {
 	if (!show) { return { display: 'none' } };
 };
 
-export default ({ show, name, amount }) => (
+export default ({ show, name, amount, hide }) => (
 	<div style={ styles(show) }>
-		<div className="Fade" onClick={ hideLightbox } />
+		<div className="Fade" onClick={ hide } />
 		<div className="Lightbox card">
-			<Icon className="Lightbox-close" onClick={ hideLightbox } i="times" />
+			<Icon className="Lightbox-close" onClick={ hide } i="times" />
 			<h1>Great!</h1>
 			<div>How much would you like to contribute?</div>
 
 			<h2>
-				AMOUNT remains to fill<br />
-				ENTS loan.
+				{ toCurrency(amount) } remains to fill<br />
+				{ name }'s loan.
 			</h2>
 
 			<label htmlFor="contribution">Your Contribution:</label>

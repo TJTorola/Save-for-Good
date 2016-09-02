@@ -3,7 +3,7 @@ import React from 'react';
 import { Icon, go, imgUrl, toCurrency } from 'utilities/helper';
 const show = id => go(`entrepreneur/${id}`);
 
-export default ({ loan }) => (
+export default ({ loan, showLightbox }) => (
 <section className="LoansItem u-full-width flex">
 	<div className="card LoansItem-pic">
 		<img src={ imgUrl(loan) } />
@@ -16,7 +16,7 @@ export default ({ loan }) => (
 		</div>
 
 		<div className="LoansItem-toolbar flex">
-			<div className="card card-button green f-grow">
+			<div className="card card-button green f-grow" onClick={ showLightbox.bind(null, loan) }>
 				<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
 			</div>
 

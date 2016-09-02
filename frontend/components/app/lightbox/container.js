@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import Lightbox from './view';
+import { hideLightbox } from 'actions/lightbox';
 
 const mapStateToProps = state => ({
 	show: state.lightbox.show,
@@ -8,7 +9,9 @@ const mapStateToProps = state => ({
 	name: state.lightbox.name
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+	hide: () => { dispatch(hideLightbox()) }
+});
 
 export default connect(
 	mapStateToProps,
