@@ -44,9 +44,16 @@ header {
 }
 
 header svg:hover {
-	fill: #F8A10C;
 	cursor: pointer;
 }
+
+header svg:hover .coin {
+	fill: #F8A10C;
+}
+
+/*header svg:hover .hand {
+	fill: #348700;
+}*/
 
 header a {
 	height: 5rem;

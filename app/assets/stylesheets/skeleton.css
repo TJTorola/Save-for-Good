@@ -388,6 +388,14 @@ form {
 .f-grow {
   flex-grow: 1; }
 
+.flex-self-center {
+  align-self: center; }
+.flex-self-left {
+  align-self: left; }
+.flex-self-right {
+  align-self: right; }
+
+
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
