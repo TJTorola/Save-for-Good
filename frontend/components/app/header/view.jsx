@@ -13,7 +13,7 @@ const logoffLink = (logoff, user) => (
 const loginLinks = (
 	<section>
 		<Link to="/register">Register</Link>
-		<button className="orange">
+		<button className="orange" onClick={ go('/login') }>
 			Login
 		</button>
 	</section>

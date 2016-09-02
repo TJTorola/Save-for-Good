@@ -36,13 +36,12 @@ export default ({ loan }) => {
 				</section>
 
 				<div className="container">
-					<section className="LoanBody">
-						<div className="LoanBody-meter card">
-						</div>
-
-						<div className="LoanBody-about card">
+					<section className="LoanBody card flex">
+						<div className="LoanBody-description f-grow">
 							<h1>About { loan.entrepreneur.name }:</h1>
 							<p dangerouslySetInnerHTML={ {__html: nlToP(loan.entrepreneur.about) } } />
+						</div>
+						<div className="LoanBody-stats">
 						</div>
 					</section>
 				</div>

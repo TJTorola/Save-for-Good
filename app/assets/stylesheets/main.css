@@ -5,6 +5,11 @@ svg {
 	height: 100%;
 }
 
+body {
+	background: #e8e8dc;
+	margin-bottom: 3rem;
+}
+
 .bg-gray {
 	background: #EEE; }
 .bg-white {
@@ -46,6 +51,7 @@ header {
 header svg:hover {
 	cursor: pointer;
 }
+
 
 header svg:hover .coin {
 	fill: #F8A10C;
@@ -307,4 +313,16 @@ content {
 	position: relative;
 	left: -5rem;
 	width: 30rem;
+}
+
+.LoanBody {
+  padding: 0;
+}
+
+.LoanBody-description {
+  padding: 3rem;
+}
+.LoanBody-stats {
+  min-width: 35rem;
+  background: #e0e0e0;
 }
