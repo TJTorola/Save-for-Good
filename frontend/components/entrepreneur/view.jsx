@@ -26,6 +26,9 @@ export default ({ loan }) => {
 				</div>
 
 				<section className="LoanPitch">
+					<div className="LoanPitch-meter">
+						<div className="LoanPitch-fill" />
+					</div>
 					<div className="container u-clearfix">
 						<h2>{ toCurrency(loan.amount) }</h2>
 						<p>{ loan.description }</p>

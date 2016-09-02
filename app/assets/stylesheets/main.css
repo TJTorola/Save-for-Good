@@ -295,18 +295,40 @@ content {
 }
 
 .LoanHead-map p {
-	background: rgba(255,255,255,.5);
+	background: rgba(255,255,255,.7);
 	margin-top: 14rem;
 	padding: 1rem;
 }
 
 .LoanPitch {
+	padding: 0;
+  padding-top: .25rem;
+	box-sizing: border-box;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	background: white;
 	width: 100%;
 	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
+}
+
+.LoanPitch .container {
 	padding: 3rem;
+}
+
+.LoanPitch-meter {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #efefef;
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: .7rem;
+}
+
+.LoanPitch-fill {
+  width: 70%;
+  background: orange;
+  height: 2rem;
+  box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
 }
 
 .LoanPitch .card-button {
