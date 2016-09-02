@@ -12,18 +12,18 @@ class Errors extends React.Component {
 
 	listItems() {
 		return this.props.errors.map(error => (
-			<div key={ error.id } onClick={ this.dismiss(error.id) } className="shadow">
-				<h1>Error <i className="fa fa-times u-pull-right"></i></h1>
-				<p>
+			<div key={ error.id } onClick={ this.dismiss(error.id) } className="Error">
+				<h1 className="Error-header">Error</h1>
+				<div className="Error-message">
 					{ error.message }
-				</p>
+				</div>
 			</div>
 		));
 	}
 
 	render () {
 		return (
-			<section id="errors">
+			<section className="Errors">
 				{ this.listItems() }
 			</section>
 		)

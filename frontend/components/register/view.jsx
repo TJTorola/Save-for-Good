@@ -11,7 +11,6 @@ const userFromEvent = e => {
 const submit = createUser => event => {
 	event.preventDefault();
 	let user = userFromEvent(event);
-	debugger
 
 	createUser(user);
 };

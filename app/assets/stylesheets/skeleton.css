@@ -210,6 +210,26 @@ input[type="button"]:focus {
   border-color: #888;
   outline: 0; }
 
+.button.orange,
+button.orange,
+input[type="submit"].orange,
+input[type="reset"].orange,
+input[type="button"].orange {
+  border-color: #F8A10C;
+  color: #F8A10C; }
+.button.orange:hover,
+button.orange:hover,
+input[type="submit"].orange:hover,
+input[type="reset"].orange:hover,
+input[type="button"].orange:hover,
+.button.orange:focus,
+button.orange:focus,
+input[type="submit"].orange:focus,
+input[type="reset"].orange:focus,
+input[type="button"].orange:focus {
+  border-color: #F75C03;
+  color: #F75C03; }
+
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

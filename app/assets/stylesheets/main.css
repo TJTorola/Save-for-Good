@@ -1,67 +1,53 @@
+/* Global
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 * {
 	font-family: "Trebuchet MS","Helvetica","Arial","sans-serif"; }
-
 svg {
-	height: 100%;
-}
-
+	height: 100%; }
 body {
 	background: #e8e8dc;
-	margin-bottom: 3rem;
-}
+	margin-bottom: 3rem; }
+p {
+	text-indent: 2rem; }
+
+/* Utility
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .bg-gray {
 	background: #EEE; }
 .bg-white {
 	background: #FFF; }
 
-.button.orange,
-button.orange,
-input[type="submit"].orange,
-input[type="reset"].orange,
-input[type="button"].orange {
-	border-color: #F8A10C;
-	color: #F8A10C; }
-.button.orange:hover,
-button.orange:hover,
-input[type="submit"].orange:hover,
-input[type="reset"].orange:hover,
-input[type="button"].orange:hover,
-.button.orange:focus,
-button.orange:focus,
-input[type="submit"].orange:focus,
-input[type="reset"].orange:focus,
-input[type="button"].orange:focus {
-	border-color: #F75C03;
-	color: #F75C03; }
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.header-shadow {
+.Header {
+	position: fixed;
+	z-index: 3;
+	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
+}
+
+.Header-shadow {
 	width: 100%;
 	height: 5.5rem;
 	position: fixed;
 	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
 }
 
-header {
-	position: fixed;
-	z-index: 3;
-	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
+.Header-icon {
+	height: 100%;
 }
 
-header svg:hover {
-	cursor: pointer;
+.Header-icon:hover {
+	cursor: pointer; 
 }
 
-
-header svg:hover .coin {
-	fill: #F8A10C;
+.Header-icon:hover .coin {
+	fill: #F8A10C; 
 }
 
-/*header svg:hover .hand {
-	fill: #348700;
-}*/
-
-header a {
+.Header-link {
 	height: 5rem;
 	box-sizing: border-box;
 	display: inline-block;
@@ -70,22 +56,26 @@ header a {
 	margin-left: 2rem;
 	margin-right: 2rem;
 	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-right: 1rem; 
 }
 
-header a:hover {
+.Header-link:hover {
 	color: #F75C03;
-	border-bottom: .5rem solid #F75C03; }
+	border-bottom: .5rem solid #F75C03; 
+}
 
-p {
-	text-indent: 2rem; }
+/* Content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-content {
+.Content {
 	position: absolute;
 	margin-top: 7rem;
 }
 
-#errors {
+/* Errors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.Errors {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -97,33 +87,23 @@ content {
 	z-index: 4;
 }
 
-#errors div {
+.Error {
 	background: white;
 	box-shadow: 1rem 1rem 0 0 rgba(0,0,0,0.2);
+	margin-bottom: 1.5rem;
 }
 
-#errors div:hover {
+.Error:hover {
 	cursor: pointer;
 }
 
-#errors .fa {
-	content: "\f00d";
-	padding-right: .7rem;
-	font-size: 2rem;
-	line-height: 3rem;
-}
-
-#errors div:hover .fa-times {
-	color: #F75C03;
-}
-
-#errors div:active {
+.Error:active {
 	position: relative;
 	top: .3rem;
 	box-shadow: .7rem .7rem 0 0 rgba(0,0,0,0.2);
 }
 
-#errors h1 {
+.Error-header {
 	background: #F55D3E;
 	font-size: 2.5rem;
 	padding: .5rem;
@@ -132,10 +112,13 @@ content {
 	margin-bottom: 0;
 }
 
-#errors p {
+.Error-message {
 	background: #ffe9e5;
 	padding: 1rem;
 }
+
+/* Cards
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .card {
 	background: white;
@@ -143,6 +126,8 @@ content {
 	margin: 0 auto;
 	box-shadow: .5rem .5rem 0 0 rgba(0,0,0,0.2);
 }
+
+/* Header */
 
 .card-header {
 	padding: 1rem;
@@ -158,44 +143,7 @@ content {
 	padding: .5rem;
 }
 
-/* ENTREPRENEURS */
-.entrepreneur {
-	margin-top: 3rem;
-}
-
-.entrepreneur .pic {
-	padding: 1rem;
-	min-width: 30rem;
-	height: 30rem;
-	margin-right: 1rem;
-}
-
-.entrepreneur img {
-	width: 100%;
-	height: auto;
-}
-
-.entrepreneur h1 {
-	background: #f8a10d;
-	font-size: 3.0rem;
-	padding: 1rem;
-	color: white;
-}
-
-.entrepreneur p {
-	padding: 2rem;
-}
-
-.entrepreneur .description {
-	padding: 0;
-	padding-top: 2rem;
-	height: 20rem;
-}
-
-.buttons {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
+/* Button */
 
 .card-button {
 	-webkit-user-select: none;
@@ -242,21 +190,60 @@ content {
 	background: #4bbd03;
 }
 
-.entrepreneur .learn-more:hover {
+.card-button.black {
+	background: #464646;
+}
+
+.card-button.black:hover {
 	background: #707070;
 }
 
-.entrepreneur .learn-more {
-	background: #464646;
-	width: 20rem;
+/* Loans
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.LoansItem {
+	margin-top: 3rem;
 }
 
-.entrepreneur .meter {
+.LoansItem-pic {
+	padding: 1rem;
+	min-width: 30rem;
+	height: 30rem;
+	margin-right: 1rem;
+}
+
+.LoansItem img {
+	width: 100%;
+	height: auto;
+}
+
+.LoansItem-header {
+	background: #f8a10d;
+	font-size: 3.0rem;
+	padding: 1rem;
+	color: white;
+}
+
+.LoansItem-body {
+	padding: 0;
+	padding-top: 2rem;
+	height: 20rem;
+}
+
+.LoansItem-description {
+	padding: 2rem;
+}
+
+.LoansItem-toolbar {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.LoansItem-meter {
 	padding: .5rem;
 	height: 2.5rem;
 }
 
-.entrepreneur .fill {
+.LoansMeter-fill {
 	display: inline-block;
 	background: #3a9600;
 	position: relative;
@@ -265,12 +252,14 @@ content {
 	box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
 }
 
-.entrepreneur .status {
+.LoansMeter-status {
 	color: white;
 	position: absolute;
 	right: .5rem;
 }
 
+/* Loan
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .LoanHead-img {
 	padding: 1rem;
 	max-width: 30rem;
@@ -334,7 +323,6 @@ content {
 
 .LoanPitch .card-button {
 	position: relative;
-	left: -5rem;
 	width: 30rem;
 }
 

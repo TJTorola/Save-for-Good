@@ -5,11 +5,11 @@ import Errors from './errors/container';
 
 export default ({ children }) => (
 	<div>
-		<div className="header-shadow" />
+		<div className="Header-shadow" />
 		<Header />
 		<Errors />
 		
-		<content className="u-full-width">
+		<content className="Content u-full-width">
 			{ children }
 		</content>
 	</div>
