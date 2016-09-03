@@ -1,7 +1,8 @@
 import { parseJSON } from 'jquery';
 
-import { receiveUser } from 'actions/user';
-import { requestLoan } from 'actions/loan';
+import { setStep }      from 'actions/checkout';
+import { receiveUser }  from 'actions/user';
+import { requestLoan }  from 'actions/loan';
 import { requestLoans } from 'actions/loans';
 
 class Bootstrapper {
@@ -30,6 +31,10 @@ class Bootstrapper {
 
 	loan(state) {
 		this.store.dispatch(requestLoan(state.params.id));
+	}
+
+	setStep(step) {
+		return () => { this.store.dispatch(setStep(step)) };
 	}
 }
 
