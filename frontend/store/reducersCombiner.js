@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import user     from 'reducers/user';
-import errors   from 'reducers/errors';
-import loans    from 'reducers/loans';
-import loan     from 'reducers/loan';
-import lightbox from 'reducers/lightbox';
-import checkout from 'reducers/checkout';
+import user          from 'reducers/user';
+import errors        from 'reducers/errors';
+import loans         from 'reducers/loans';
+import loan          from 'reducers/loan';
+import lightbox      from 'reducers/lightbox';
+import contributions from 'reducers/checkout/contributions';
 
 export default combineReducers({ 
 	user,
@@ -13,5 +13,7 @@ export default combineReducers({
 	loans,
 	loan,
 	lightbox,
-	checkout
+	checkout: combineReducers({
+		contributions
+	})
 });
