@@ -6,11 +6,11 @@ import * as Billing  from './billing/container';
 import * as Donation from './donation/container';
 import Form from './form_wrapper';
 
-export default () => (
+export default ({ step }) => (
 	<div className="Checkout container">
-		<Form form={ Confirm } />
-		<Form form={ Donation } />
-		<Form form={ Billing } />
-		<Form form={ Submit } />
+		<Form show={ step === "CONFIRM" } form={ Confirm } />
+		<Form show={ step === "DONATION" } form={ Donation } />
+		<Form show={ step === "BILLING" } form={ Billing } />
+		<Form show={ step === "SUBMIT" } form={ Submit } />
 	</div>
-)
+);

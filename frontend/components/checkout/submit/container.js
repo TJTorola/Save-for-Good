@@ -8,6 +8,7 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch => ({});
 
 export const title = "Submit";
+export const link = "/checkout/submit";
 export const component = connect(
 	mapStateToProps,
 	mapDispatchToProps
