@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App           from './app/view';
 import Login         from './login/container';
 import Register      from './register/container';
-import Checkout      from './checkout/container';
+import Checkout      from './checkout/view';
 import Portfolio     from './portfolio/view';
 import Entrepreneur  from './entrepreneur/container';
 import Entrepreneurs from './entrepreneurs/container';

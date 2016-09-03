@@ -1,11 +1,14 @@
 import { connect } from 'react-redux';
 
-import Checkout from './view';
+import Submit from './view';
+import { showLightbox } from 'actions/lightbox';
 
 const mapStateToProps = state => ({});
+
 const mapDispatchToProps = dispatch => ({});
 
-export default connect(
+export const title = "Submit";
+export const component = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Checkout);
+)(Submit);

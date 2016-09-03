@@ -1,15 +1,16 @@
 import React from 'react';
 
-import Submit       from './submit'
-import Confirm      from './confirm'
-import Billing      from './billing'
-import Contribution from './contribution'
+import * as Submit   from './submit/container';
+import * as Confirm  from './confirm/container';
+import * as Billing  from './billing/container';
+import * as Donation from './donation/container';
+import Form from './form_wrapper';
 
 export default () => (
 	<div className="Checkout container">
-		<Confirm show={ true } />
-		<Contribution show={ false } />
-		<Billing show={ false } />
-		<Submit show={ false } />
+		<Form form={ Confirm } />
+		<Form form={ Donation } />
+		<Form form={ Billing } />
+		<Form form={ Submit } />
 	</div>
 )
