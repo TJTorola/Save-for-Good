@@ -15,13 +15,13 @@ export default ({ loan, showLightbox }) => (
 			<p className="LoansItem-description">{ loan.description }</p>
 		</div>
 
-		<div className="LoansItem-toolbar flex">
-			<div className="card card-button green f-grow" onClick={ showLightbox.bind(null, loan) }>
-				<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
+		<div className="toolbar">
+			<div className="card-button black" onClick={ show(loan.id) }>
+				<Icon i="plus"/> Learn More
 			</div>
 
-			<div className="card card-button black f-grow" onClick={ show(loan.id) }>
-				<Icon i="plus"/> Learn More
+			<div className="card-button green" onClick={ showLightbox.bind(null, loan) }>
+				<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
 			</div>
 		</div>
 

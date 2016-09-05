@@ -37,8 +37,10 @@ export default ({ loan, showLightbox }) => {
 					<div className="container u-clearfix">
 						<h2>{ toCurrency(loan.amount) }</h2>
 						<p>{ loan.description }</p>
-						<div className="card card-button green pull-right" onClick={ showLightbox.bind(null, loan) }>
-							<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
+						<div className="LoanPitch-invest">
+							<div className="card-button green" onClick={ showLightbox.bind(null, loan) }>
+								<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
+							</div>
 						</div>
 					</div>
 				</section>

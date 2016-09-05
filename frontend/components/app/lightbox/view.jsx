@@ -55,13 +55,13 @@ class Lightbox extends React.Component {
 					<label htmlFor="contribution">Your Contribution:</label>
 					<input type="text" id="contribution" defaultValue={ 25.00 } />
 				</div>
-				<div className="Lightbox-toolbar">
-					<div className="card-button green f-grow" onClick={ submit }>
-						<Icon i="cart" /> Checkout
-					</div>
-
+				<div className="Lightbox-toolbar toolbar">
 					<div className="card-button black f-grow" onClick={ add }>
 						<Icon i="plus" /> Add and Continue
+					</div>
+
+					<div className="card-button green f-grow" onClick={ submit }>
+						<Icon i="cart" /> Checkout
 					</div>
 				</div>
 			</div>
