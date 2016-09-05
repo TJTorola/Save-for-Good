@@ -11,6 +11,10 @@ body {
 p {
 	text-indent: 2rem; }
 
+h1, h2, h3, h4 {
+	margin-bottom: 0;
+}
+
 /* Utility
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -491,4 +495,41 @@ p {
 
 .ConfirmTotal-amount {
 	width: 15rem;
+}
+
+/* Checkout-donate
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.Donate {
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.Donate-title {
+	margin-bottom: 3rem;
+}
+
+.Donate-pitch {
+	margin-bottom: 3rem;
+}
+
+.Donate-slider {
+	padding: 1rem 3rem;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.Donate-slider input {
+	width: 100%;
+}
+
+.Breakdown-labels {
+	padding: 1rem 3rem;
+	background: #348700;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Breakdown-percent {
+	line-height: 6rem;
 }

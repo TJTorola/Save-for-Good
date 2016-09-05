@@ -1,11 +1,15 @@
 import React from 'react';
-import { parseJSON } from 'jquery';
 
+import { toCurrency } from 'utilities/helper';
 import Contribution from './contribution';
 
 const map = contributions => contributions.map(contribution => (
 	<Contribution contribution={ contribution } key={ contribution.loan.id } />
 ));
+
+const total = contributions => contributions.reduce((accum, contribution) => (
+	accum + contribution.amount
+), 0);
 
 export default ({ contributions }) => (
 	<div className="card Confirm">
@@ -13,7 +17,7 @@ export default ({ contributions }) => (
 
 		<div className="Confirm-total">
 			<strong className="ConfirmTotal-label">Total Contribution:</strong>
-			<span className="ConfirmTotal-amount">$ 50.00</span>
+			<span className="ConfirmTotal-amount">{ toCurrency(total(contributions)) }</span>
 		</div>
 	</div>
 );
