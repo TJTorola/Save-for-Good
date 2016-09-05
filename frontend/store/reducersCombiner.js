@@ -7,6 +7,7 @@ import loan          from 'reducers/loan';
 import lightbox      from 'reducers/lightbox';
 
 import step          from 'reducers/checkout/step';
+import donation      from 'reducers/checkout/donation';
 import contributions from 'reducers/checkout/contributions';
 
 export default combineReducers({ 
@@ -17,6 +18,7 @@ export default combineReducers({
 	lightbox,
 	checkout: combineReducers({
 		contributions,
-		step
+		step,
+		donation
 	})
 });
