@@ -4,7 +4,7 @@ import Submit   from './submit/container';
 import Confirm  from './confirm/container';
 import Billing  from './billing/container';
 import Donation from './donation/container';
-import Form from './form_wrapper';
+import Form     from './form_wrapper';
 
 export default ({ step }) => (
 	<div className="Checkout container">

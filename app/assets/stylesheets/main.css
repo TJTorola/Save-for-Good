@@ -19,6 +19,21 @@ p {
 .bg-white {
 	background: #FFF; }
 
+.toolbar {
+	display: flex;
+	padding: 1rem 0;
+}
+
+.toolbar * {
+	flex-grow: 1;
+	margin-right: 1rem;
+}
+
+.toolbar .card-button:last-child {
+	margin-right: 0;
+}
+
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -157,6 +172,7 @@ p {
 	padding: 0;
 	line-height: 3.7rem;
 	box-sizing: border-box;
+	box-shadow: .5rem .5rem 0 0 rgba(0,0,0,0.2);
 	border-left: 3.7rem solid rgba(0,0,0,.1);
 	position: relative;
 	padding-left: 3rem;
@@ -183,7 +199,6 @@ p {
 
 .card-button.green {
 	background: #3a9600;
-	margin-right: 1rem;
 }
 
 .card-button.green:hover {
@@ -413,5 +428,4 @@ p {
 }
 
 .Checkout-form {
-	margin-bottom: 1rem;
 }

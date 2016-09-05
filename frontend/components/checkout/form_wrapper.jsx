@@ -14,9 +14,11 @@ export default ({ Form, show, link, title }) => (
 
 		<div style={ styles(show) }>
 			<Form />
-		</div>
 
-		<div class="card card-button black">< Last</div>
-		<div class="card card-button green">Next ></div>
+			<div className="toolbar">
+				<div className="card-button black"><Icon i="left" /> Last</div>
+				<div className="card-button green">Next <Icon i="right" /></div>
+			</div>
+		</div>
 	</div>
 )
