@@ -18,6 +18,12 @@ export const imgUrl = loan => (
 	`//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`
 );
 
+export const linkState = component => field => event => {
+	let newState = {};
+	newState[field] = event.target.value;
+	component.setState(newState);
+}
+
 export const Icon = (props) => (
 	<svg {...props}
 		viewBox="0 0 1792 1792" 
