@@ -8,7 +8,12 @@ const map = contributions => contributions.map(contribution => (
 ));
 
 export default ({ contributions }) => (
-	<div>
+	<div className="card Confirm">
 		{ map(contributions) }
+
+		<div className="Confirm-total">
+			<strong className="ConfirmTotal-label">Total Contribution:</strong>
+			<span className="ConfirmTotal-amount">$ 50.00</span>
+		</div>
 	</div>
 );

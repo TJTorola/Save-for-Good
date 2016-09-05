@@ -431,3 +431,64 @@ p {
 
 .Checkout-form {
 }
+
+/* Checkout-confirm
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.Confirm-contribution {
+	padding: 1rem;
+	display: flex;
+	border-bottom: thin solid lightgray;
+}
+
+.Contribution-pic {
+	width: 14rem;
+	height: 14rem;
+	margin-right: 1rem;
+}
+
+.Contribution-pic img {
+	width: 100%;
+	box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
+}
+
+.Contribution-body {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Contrubution-desc {
+	flex-grow: 1;
+}
+
+.Contribution-name {
+	margin-bottom: 0;
+}
+
+.Contribution-amount {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.Contribution-amount input {
+	margin-bottom: 0;
+	width: 15rem;
+}
+
+.Confirm-total {
+	display: flex;
+	padding: 1rem;
+}
+
+.ConfirmTotal-label {
+	flex-grow: 1;
+  text-align: right;
+  padding-right: 3rem;
+}
+
+.ConfirmTotal-amount {
+	width: 15rem;
+}
