@@ -4,7 +4,9 @@ export const showLightbox = loan => ({
 	loan: {
 		id: loan.id,
 		amount: loan.amount,
-		name: loan.entrepreneur.name
+		entrepreneurId: loan.entrepreneur.id,
+		name: loan.entrepreneur.name,
+		location: loan.entrepreneur.location
 	}
 });
 

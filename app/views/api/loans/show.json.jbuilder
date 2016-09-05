@@ -7,6 +7,7 @@ json.loan do
 	json.loanLength @loan.loan_length
 	json.paymentPeriodLength @loan.payment_period_length
 	json.entrepreneur do
+		json.id @loan.user.id
 		json.name @loan.user.name
 		json.location @loan.user.location
 		json.about @loan.user.about
