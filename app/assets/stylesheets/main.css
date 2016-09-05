@@ -411,3 +411,7 @@ p {
 .Checkout-icon {
 	height: 1.2rem;
 }
+
+.Checkout-form {
+	margin-bottom: 1rem;
+}

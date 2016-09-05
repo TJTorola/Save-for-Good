@@ -7,9 +7,7 @@ const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({});
 
-export const title = "Confirm Contributions";
-export const link = "/checkout/confirm";
-export const component = connect(
+export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Confirm);

@@ -7,9 +7,7 @@ const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({});
 
-export const title = "Save for Good Donation";
-export const link = "/checkout/donation";
-export const component = connect(
+export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Donation);
