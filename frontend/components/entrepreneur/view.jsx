@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { nlToP, toCurrency, imgUrl } from 'utilities/helper';
-import { Icon } from 'modules/index';
+import { Icon, InvestButton } from 'modules/index';
 
 const mapUrl = loc => `//maps.googleapis.com/maps/api/staticmap?center=${loc}&zoom=4&size=800x400&markers=color:red%7C${loc}&key=AIzaSyBmqYlVFpuSr2yWPh0ZPhP-I5GKGWnshjc`
 const mapStyle = loc => ({
@@ -13,7 +13,7 @@ const lightboxOptions = (loan) => ({
 	name: loan.entrepreneur.name
 })
 
-export default ({ loan, showLightbox }) => {
+export default ({ loan }) => {
 	if (loan) {
 		return (
 			<div>
@@ -39,9 +39,7 @@ export default ({ loan, showLightbox }) => {
 						<h2>{ toCurrency(loan.amount) }</h2>
 						<p>{ loan.description }</p>
 						<div className="LoanPitch-invest">
-							<div className="card-button green" onClick={ showLightbox.bind(null, loan) }>
-								<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
-							</div>
+							<InvestButton loan={ loan } />
 						</div>
 					</div>
 				</section>

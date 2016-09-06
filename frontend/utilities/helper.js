@@ -5,8 +5,8 @@ import icons from './iconsSvg';
 
 export const go = path => () => browserHistory.push(path);
 
-export const toCurrency = amount => {
-	return `$ ${(amount/100).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
+export const toCurrency = (amount, length = 2) => {
+	return `$ ${(amount/100).toFixed(length).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
 };
 
 export const nlToP = block => {
