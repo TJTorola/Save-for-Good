@@ -2,15 +2,13 @@ import { connect } from 'react-redux';
 
 import Entrepreneurs from './view';
 import { requestLoans } from 'actions/loans';
-import { showLightbox } from 'actions/lightbox';
 
 const mapStateToProps = state => ({
 	loans: state.loans
 });
 
 const mapDispatchToProps = dispatch => ({
-	getLoans: id => dispatch(requestLoans(id)),
-	showLightbox: loan => dispatch(showLightbox(loan))
+	getLoans: id => dispatch(requestLoans(id))
 });
 
 export default connect(

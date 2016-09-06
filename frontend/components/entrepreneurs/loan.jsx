@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { Icon, go, imgUrl, toCurrency } from 'utilities/helper';
+import InvestButton from 'components/modules/invest_button/container';
+
 const show = id => go(`entrepreneur/${id}`);
 
-export default ({ loan, showLightbox }) => (
+export default ({ loan }) => (
 <section className="LoansItem u-full-width flex">
 	<div className="card LoansItem-pic">
 		<img src={ imgUrl(loan) } />
@@ -20,9 +22,7 @@ export default ({ loan, showLightbox }) => (
 				<Icon i="plus"/> Learn More
 			</div>
 
-			<div className="card-button green" onClick={ showLightbox.bind(null, loan) }>
-				<Icon i="s4g"/> Invest in { loan.entrepreneur.name }
-			</div>
+			<InvestButton loan={ loan } />
 		</div>
 
 		<div className="card LoansItem-meter">
