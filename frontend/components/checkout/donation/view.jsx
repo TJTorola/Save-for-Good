@@ -33,7 +33,7 @@ export default ({ contributions, percent, setDonation }) => (
 
 		<div className="Donate-question">How much would you like to donate?</div>
 		<div className="Donate-slider">
-			<input type="range" onChange={ linkDonation(setDonation) } />
+			<input type="range" onChange={ linkDonation(setDonation) } defaultValue={ percent } />
 		</div>
 
 		<div className="Breakdown-labels">
