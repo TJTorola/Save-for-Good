@@ -3,7 +3,9 @@ class CreateContributions < ActiveRecord::Migration
     create_table :contributions do |t|
     	t.integer :loan_id, null: false
     	t.integer :user_id, null: false
+      t.integer :payment_id, null: false
     	t.integer :amount, null: false
+      t.integer :donation, null: false
 
       t.timestamps null: false
     end
