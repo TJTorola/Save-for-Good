@@ -2,7 +2,8 @@ import React from 'react';
 
 const RANGE = 4;
 const STEPS = 14;
-const START = -RANGE / 2;
+const BOOST = 1;
+const START = (-RANGE / 2) + BOOST;
 
 const sigmoid = x => 1 / (1 + Math.pow(Math.E, -x))
 
