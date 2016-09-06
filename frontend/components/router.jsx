@@ -32,8 +32,6 @@ export default ({ store }) => {
 					onEnter={ bootstrap.setStep("DONATION") } />
 				<Router path="billing"
 					onEnter={ bootstrap.setStep("BILLING") } />
-				<Router path="submit"
-					onEnter={ bootstrap.setStep("SUBMIT") } />
 			</Route>
 		</Route>
 	</Router>

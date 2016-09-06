@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Submit   from './submit/container';
 import Confirm  from './confirm/container';
 import Billing  from './billing/container';
 import Donation from './donation/container';
@@ -32,20 +31,11 @@ export default ({ step }) => (
 
 			prev="/checkout/donation"
 			link="/checkout/billing"
-			next="/checkout/submit"
-
-			show={ step === "BILLING" } 
-			Form={ Billing } />
-		<Form
-			title="Submit"
-
-			prev="/checkout/billing"
-			link="/checkout/submit"
-			next="/checkout"
+			next="/portfolio"
 			nextText="Submit Contributions"
 			nextIcon="s4g"
 
-			show={ step === "SUBMIT" } 
-			Form={ Submit } />
+			show={ step === "BILLING" } 
+			Form={ Billing } />
 	</div>
 );
