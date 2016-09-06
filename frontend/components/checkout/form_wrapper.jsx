@@ -22,12 +22,12 @@ export default ({ Form, link, title, show, next, prev,
 			<Form />
 
 			<div className="toolbar">
-				<button className="card-button black" onClick={ go(prev) }>
+				<div className="card-button black" onClick={ go(prev) }>
 					<Icon i={ prevIcon } /> { prevText }
-				</button>
-				<button className="card-button green" onClick={ go(next) }>
+				</div>
+				<div className="card-button green" onClick={ go(next) }>
 					<Icon i={ nextIcon } /> { nextText }
-				</button>
+				</div>
 			</div>
 		</div>
 	</div>
