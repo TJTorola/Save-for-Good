@@ -24,7 +24,7 @@ class Lightbox extends React.Component {
 	submit() {
 		this.addContribution();
 		this.props.hide();
-		go('/checkout')();
+		go('/checkout/confirm')();
 	}
 
 	add() {

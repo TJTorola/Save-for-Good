@@ -22,6 +22,13 @@ const donateValue = (percent, contributions) => {
 	return total(contributions) - returnValue(percent, contributions);
 }
 
+const name = contributions => {
+	let first;
+	for (first in contributions) break;
+
+	return contributions[first].loan.name;
+}
+
 export default ({ contributions, percent, setDonation }) => (
 	<div className="Donate card">
 		<div className="Donate-content">
@@ -29,8 +36,8 @@ export default ({ contributions, percent, setDonation }) => (
 				<h2 className="Donate-title">Help Save for Good</h2>
 				<div className="Donate-pitch">
 					Save for Good works hard to keep people in the field in order to maintain respectful<br />
-					relationships directly with our Entrepreneur like ENT. If you appriciate our work one<br />
-					thing you can do to help us keep doing this work is donate a portion of your returns<br />
+					relationships directly with entrepreneurs like { name(contributions) }. If you appriciate our work, one<br />
+					thing you can do to help us keep going is to donate a portion of your returns<br />
 					back to Save for Good at the end of your Entrepreneurs Loan cycle.<br />
 					<br />
 					<strong>This donation will not be made until <i>after</i> the loan has been disbursed and then paid back.</strong>
