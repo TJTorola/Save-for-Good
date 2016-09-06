@@ -1,14 +1,14 @@
 import React from 'react';
 
+const BOOST = 1;
 const RANGE = 4;
 const STEPS = 14;
-const BOOST = 1;
-const START = (-RANGE / 2) + BOOST;
 
 const sigmoid = x => 1 / (1 + Math.pow(Math.E, -x))
 
 const opacity = (i, percent = 0) => {
-	let x = START - (i * (RANGE / STEPS));
+	let start = (-RANGE / 2) + BOOST;
+	let x = start - (i * (RANGE / STEPS));
 	x += (percent / 100) * RANGE * 2
 	return sigmoid(x);
 }

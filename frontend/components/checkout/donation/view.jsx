@@ -31,7 +31,9 @@ export default ({ contributions, percent, setDonation }) => (
 					Save for Good works hard to keep people in the field in order to maintain respectful<br />
 					relationships directly with our Entrepreneur like ENT. If you appriciate our work one<br />
 					thing you can do to help us keep doing this work is donate a portion of your returns<br />
-					back to Save for Good at the end of your Entrepreneurs Loan cycle.
+					back to Save for Good at the end of your Entrepreneurs Loan cycle.<br />
+					<br />
+					<strong>This donation will not be made until <i>after</i> the loan has been disbursed and then paid back.</strong>
 				</div>
 			</div>
 
