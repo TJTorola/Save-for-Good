@@ -533,3 +533,16 @@ h1, h2, h3, h4 {
 .Breakdown-percent {
 	line-height: 6rem;
 }
+
+/* Checkout-billing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.Billing {
+	padding: 3rem 0;
+}
+
+.Billing h1 {
+	text-align: center;
+	background: #348700;
+	color: white;
+	padding: 1rem;
+}

@@ -1,8 +1,6 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
 
-import icons from './iconsSvg';
-
 export const go = path => () => browserHistory.push(path);
 
 export const toCurrency = (amount, length = 2) => {
