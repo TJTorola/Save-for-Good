@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Icon, go } from 'utilities/helper'
+import { go } from 'utilities/helper';
+import { Icon } from 'modules/index';
 
 const styles = show => {
 	if (!show) { return { display: 'none' } }

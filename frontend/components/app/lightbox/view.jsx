@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Icon, toCurrency, go } from 'utilities/helper';
+import { toCurrency, go } from 'utilities/helper';
+import { Icon } from 'modules/index';
 
 class Lightbox extends React.Component {
 	constructor(props) {

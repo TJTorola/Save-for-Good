@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'utilities/helper';
+import { Icon } from 'modules/index';
 
 export default ({ loan, contributions, showLightbox }) => (
 	<div className="card-button green" onClick={ showLightbox.bind(null, loan) }>

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Icon, nlToP, toCurrency, imgUrl } from 'utilities/helper';
+import { nlToP, toCurrency, imgUrl } from 'utilities/helper';
+import { Icon } from 'modules/index';
 
 const mapUrl = loc => `//maps.googleapis.com/maps/api/staticmap?center=${loc}&zoom=4&size=800x400&markers=color:red%7C${loc}&key=AIzaSyBmqYlVFpuSr2yWPh0ZPhP-I5GKGWnshjc`
 const mapStyle = loc => ({

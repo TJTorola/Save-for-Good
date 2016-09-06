@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Icon, go, imgUrl, toCurrency } from 'utilities/helper';
-import InvestButton from 'components/modules/invest_button/container';
+import { go, imgUrl, toCurrency } from 'utilities/helper';
+import { Icon, InvestButton } from 'modules/index';
 
 const show = id => go(`entrepreneur/${id}`);
 

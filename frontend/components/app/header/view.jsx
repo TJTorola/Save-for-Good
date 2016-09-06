@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import { go, Icon } from 'utilities/helper'
+import { go } from 'utilities/helper'
+import { Icon } from 'modules/index';
 
 const logoffLink = (logoff, user) => (
 	<section>
