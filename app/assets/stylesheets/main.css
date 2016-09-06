@@ -116,6 +116,10 @@ h1, h2, h3, h4 {
 	cursor: pointer;
 }
 
+.Error:hover svg {
+	fill: #f8a10c;
+}
+
 .Error:active {
 	position: relative;
 	top: .3rem;
@@ -123,12 +127,21 @@ h1, h2, h3, h4 {
 }
 
 .Error-header {
+	position: relative;
 	background: #F55D3E;
 	font-size: 2.5rem;
 	padding: .5rem;
 	padding-left: 1rem;
 	color: white;
 	margin-bottom: 0;
+}
+
+.Error-header svg {
+	fill: white;
+	height: 2rem;
+	position: absolute;
+	right: 1rem;
+	top: .8rem;
 }
 
 .Error-message {

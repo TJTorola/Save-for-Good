@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Icon } from 'modules/index';
+
 class Errors extends React.Component {
 	constructor(props) {
 		super(props);
@@ -13,7 +15,7 @@ class Errors extends React.Component {
 	listItems() {
 		return this.props.errors.map(error => (
 			<div key={ error.id } onClick={ this.dismiss(error.id) } className="Error">
-				<h1 className="Error-header">Error</h1>
+				<h1 className="Error-header">Error <Icon i="times" /></h1>
 				<div className="Error-message">
 					{ error.message }
 				</div>
