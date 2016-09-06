@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 	contributions: state.checkout.contributions
 });
 const mapDispatchToProps = dispatch => ({
-	showLightbox: loan => dispatch(showLightbox(loan))
+	showLightbox: loan => { dispatch(showLightbox(loan)) }
 });
 
 export default connect(

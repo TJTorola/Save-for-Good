@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon } from 'modules/index';
+import { Icon, ContributionLightbox } from 'modules/index';
 import { toCurrency } from 'utilities/helper';
 
 const body = (loan, contributions) => {

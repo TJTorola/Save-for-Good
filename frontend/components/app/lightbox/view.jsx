@@ -7,8 +7,9 @@ class Lightbox extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.submit = this.submit.bind(this);
-		this.add = this.add.bind(this);
+		this.submit        = this.submit.bind(this);
+		this.add           = this.add.bind(this);
+		this.initialAmount = this.initialAmount.bind(this);
 	}
 
 	addContribution() {
@@ -32,12 +33,21 @@ class Lightbox extends React.Component {
 		this.props.hide();
 	}
 
+	initialAmount() {
+		let contribution = this.props.contributions[this.props.loan.id];
+		if (contribution) {
+			return contribution.amount / 100
+		} else {
+			return 25
+		}
+	}
+
 	styles(show) {
 		if (!show) { return { display: 'none' } };
 	}
 
 	render() {
-		let { styles, submit, add } = this;
+		let { styles, submit, add, initialAmount } = this;
 		let { loan, show, hide } = this.props;
 
 		return (
@@ -54,7 +64,7 @@ class Lightbox extends React.Component {
 					</h2>
 
 					<label htmlFor="contribution">Your Contribution:</label>
-					<input type="text" id="contribution" defaultValue={ 25.00 } />
+					<input type="text" id="contribution" defaultValue={ initialAmount() } />
 				</div>
 				<div className="Lightbox-toolbar toolbar">
 					<div className="card-button black f-grow" onClick={ add }>

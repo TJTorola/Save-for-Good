@@ -165,6 +165,8 @@ h1, h2, h3, h4 {
 /* Button */
 
 .card-button {
+	border: 0;
+	border-radius: 0;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -195,6 +197,10 @@ h1, h2, h3, h4 {
 	cursor: pointer;
 }
 
+.card-button:focus, .card-button:hover {
+	color: white;
+}
+
 .card-button:active {
 	position: relative;
 	top: .3rem;
@@ -205,7 +211,7 @@ h1, h2, h3, h4 {
 	background: #3a9600;
 }
 
-.card-button.green:hover {
+.card-button.green:hover, .card-button.green:focus {
 	background: #4bbd03;
 }
 
@@ -213,7 +219,7 @@ h1, h2, h3, h4 {
 	background: #464646;
 }
 
-.card-button.black:hover {
+.card-button.black:hover, .card-button.black:focus {
 	background: #707070;
 }
 
