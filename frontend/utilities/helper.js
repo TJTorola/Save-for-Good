@@ -24,6 +24,15 @@ export const linkState = component => field => event => {
 	component.setState(newState);
 }
 
+export const toArray = object => {
+	let array = [];
+	for (let key in object) {
+		array.push(object[key]);
+	}
+
+	return array;
+}
+
 export const Icon = (props) => (
 	<svg {...props}
 		viewBox="0 0 1792 1792" 

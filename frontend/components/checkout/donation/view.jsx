@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { linkState, toCurrency } from 'utilities/helper';
+import { linkState, toCurrency, toArray } from 'utilities/helper';
 
 const linkDonation = setDonation => e => {
 	setDonation(e.target.value);
 };
 
 const total = contributions => (
-	contributions.reduce((accum, contribution) => (
+	toArray(contributions).reduce((accum, contribution) => (
 		accum + contribution.amount
 	), 0)
 );
