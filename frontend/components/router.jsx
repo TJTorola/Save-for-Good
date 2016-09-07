@@ -26,7 +26,7 @@ export default ({ store }) => {
 				onEnter={ bootstrap.loan } />
 			<Route path="portfolio" component={ Portfolio } />
 			<Route path="checkout" component={ Checkout }
-				onEnter={ bootstrap.checkLogin('/checkout') }>
+				onEnter={ bootstrap.checkLogin }>
 				<Router path="confirm"
 					onEnter={ bootstrap.setStep("CONFIRM") } />
 				<Router path="donation"

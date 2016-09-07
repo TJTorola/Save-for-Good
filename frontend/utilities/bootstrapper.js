@@ -16,6 +16,7 @@ class Bootstrapper {
 		this.user  = this.user.bind(this);
 		this.loans = this.loans.bind(this);
 		this.loan  = this.loan.bind(this);
+		this.checkLogin = this.checkLogin.bind(this);
 	}
 
 	user() {
@@ -43,13 +44,11 @@ class Bootstrapper {
 		return () => { this.store.dispatch(setStep(step)) };
 	}
 
-	checkLogin(targetPath) {
-		return () => {
-			let user = this.store.getState().user;
-			if (!user) {
-				this.store.dispatch(receiveErrors(['You must be logged in to view that page.']));
-				go('/login')();
-			}
+	checkLogin(nextState, replace) {
+		let user = this.store.getState().user;
+		if (!user) {
+			this.store.dispatch(receiveErrors(['You must be logged in to view that page.']));
+			replace('/login')
 		}
 	}
 }
