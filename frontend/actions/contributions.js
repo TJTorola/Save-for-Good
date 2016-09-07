@@ -6,3 +6,13 @@ export const receiveContributions = contributions => ({
 	type: "RECEIVE_CONTRIBUTIONS",
 	contributions
 });
+
+export const receiveContributionsByMonth = contributionsByMonth => ({
+	type: "RECEIVE_CONTRIBUTIONS_BY_MONTH",
+	contributionsByMonth
+});
+
+export const receiveRepaymentsByMonth = repaymentsByMonth => ({
+	type: "RECEIVE_REPAYMENTS_BY_MONTH",
+	repaymentsByMonth
+});

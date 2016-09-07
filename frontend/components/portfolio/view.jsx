@@ -1,16 +1,19 @@
 import React from 'react';
+import { Line } from 'react-chartjs';
 
 import { toCurrency } from 'utilities/helper';
 
 const rows = contributions => contributions.map(contribution => (
 	<tr key={ contribution.id }>
-		<td>{ contribution.loan.entrepreneur.name } ({ contribution.loan.entrepreneur.location })</td>
+		<td>{ contribution.loan.entrepreneur.name } ({ contribution.loan.entrepreneur.location }) - { toCurrency(contribution.loan.amount) }</td>
 		<td>{ toCurrency(contribution.amount) }</td>
-		<td>{ toCurrency(contribution.loan.amount) }</td>
+		<td>{ toCurrency(contribution.donationAmount) }</td>
 		<td className="u-text-right">{ contribution.loan.repaymentDate }</td>
 		<td className="u-text-right">{ contribution.loan.status }</td>
 	</tr>
 ));
+
+// const chartOptions()
 
 export default ({ contributions }) => (
 	<div className="container">
@@ -22,9 +25,9 @@ export default ({ contributions }) => (
 			<table className="Portfolio-table">
 				<thead>
 					<tr>
-						<th>Entrepreneur</th>
-						<th>Contribution Amount</th>
-						<th>Total Loan Value</th>
+						<th>Loan</th>
+						<th>Contribution</th>
+						<th>Donation</th>
 						<th className="u-text-right">Repayment Date</th>
 						<th className="u-text-right">Loan Status</th>
 					</tr>
@@ -33,6 +36,8 @@ export default ({ contributions }) => (
 					{ rows(contributions) }
 				</tbody>
 			</table>
+
+			
 		</section>
 	</div>
 );

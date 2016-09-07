@@ -1,11 +1,17 @@
 import contributionsApi from 'utilities/api/contributions';
-import { receiveContributions } from 'actions/contributions';
+import { 
+	receiveContributions,
+	receiveContributionsByMonth,
+	receiveRepaymentsByMonth 
+} from 'actions/contributions';
 
 const requestContributions = (api, store, action) => {
 	let promise = api.get();
 
 	promise.done(response => {
 		store.dispatch(receiveContributions(response.contributions));
+		store.dispatch(receiveContributionsByMonth(response.contributionsByMonth));
+		store.dispatch(receiveRepaymentsByMonth(response.repaymentsByMonth));
 	});
 }
 

@@ -4,6 +4,6 @@ class Api::LoansController < ApplicationController
 	end
 
 	def show
-		@loan = Loan.find(params[:id]).includes(:contributions)
+		@loan = Loan.includes(:contributions).find(params[:id])
 	end
 end
