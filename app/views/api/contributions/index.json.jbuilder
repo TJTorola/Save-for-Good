@@ -12,7 +12,6 @@ json.contributions do
 			json.loanLength contribution.loan.loan_length
 			json.repaymentDate contribution.loan.repayment_date
 			json.paymentPeriodLength contribution.loan.payment_period_length
-			json.contributed contribution.loan.contributed
 			json.entrepreneur do
 				json.id contribution.loan.user.id
 				json.name contribution.loan.user.name
