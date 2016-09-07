@@ -25,7 +25,8 @@ export default ({ store }) => {
 			<Route path="entrepreneur/:id" component={ Entrepreneur } 
 				onEnter={ bootstrap.loan } />
 			<Route path="portfolio" component={ Portfolio } />
-			<Route path="checkout" component={ Checkout }>
+			<Route path="checkout" component={ Checkout }
+				onEnter={ bootstrap.checkLogin('/checkout') }>
 				<Router path="confirm"
 					onEnter={ bootstrap.setStep("CONFIRM") } />
 				<Router path="donation"

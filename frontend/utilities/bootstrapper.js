@@ -1,10 +1,13 @@
 import { parseJSON } from 'jquery';
 
+import { go } from 'utilities/helper';
+
 import { setStep }        from 'actions/checkout';
 import { receiveUser }    from 'actions/user';
 import { destroySession } from 'actions/session';
 import { requestLoan }    from 'actions/loan';
 import { requestLoans }   from 'actions/loans';
+import { receiveErrors }  from 'actions/errors';
 
 class Bootstrapper {
 	constructor(store) {
@@ -38,6 +41,16 @@ class Bootstrapper {
 
 	setStep(step) {
 		return () => { this.store.dispatch(setStep(step)) };
+	}
+
+	checkLogin(targetPath) {
+		return () => {
+			let user = this.store.getState().user;
+			if (!user) {
+				this.store.dispatch(receiveErrors(['You must be logged in to view that page.']));
+				go('/login')();
+			}
+		}
 	}
 }
 
