@@ -50,6 +50,24 @@ class User < ActiveRecord::Base
 		months
 	end
 
+	def repayments_by_month
+		months = {}
+		12.times do |i|
+			month = i.months.from_now.strftime("%B")
+			months[month] = 0
+		end
+
+		contributions.each do |contribution|
+			next if contribution.loan.repayment_date > 12.months.from_now
+
+			month = contribution.loan.repayment_date.strftime("%B")
+			amount = contribution.amount - contribution.donation_amount
+			months[month] += (amount.to_f / 100)
+		end
+
+		months
+	end
+
 	private
 
 	def downcase_email

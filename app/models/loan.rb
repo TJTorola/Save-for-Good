@@ -19,6 +19,6 @@ class Loan < ActiveRecord::Base
 	end
 
 	def repayment_date
-		(end_date + loan_length.days).strftime("%F")
+		(end_date + loan_length.days)
 	end
 end
