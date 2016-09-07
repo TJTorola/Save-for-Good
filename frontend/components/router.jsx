@@ -1,11 +1,12 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { chain } from 'utilities/helper';
 
 import App           from './app/view';
 import Login         from './login/container';
 import Register      from './register/container';
 import Checkout      from './checkout/container';
-import Portfolio     from './portfolio/view';
+import Portfolio     from './portfolio/container';
 import Entrepreneur  from './entrepreneur/container';
 import Entrepreneurs from './entrepreneurs/container';
 
@@ -24,7 +25,8 @@ export default ({ store }) => {
 				onEnter={ bootstrap.loans } />
 			<Route path="entrepreneur/:id" component={ Entrepreneur } 
 				onEnter={ bootstrap.loan } />
-			<Route path="portfolio" component={ Portfolio } />
+			<Route path="portfolio" component={ Portfolio } 
+				onEnter={ chain(bootstrap.checkLogin, bootstrap.contributions) } />
 			<Route path="checkout" component={ Checkout }
 				onEnter={ bootstrap.checkLogin }>
 				<Router path="confirm"

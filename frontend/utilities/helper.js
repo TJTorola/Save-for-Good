@@ -30,3 +30,7 @@ export const toArray = object => {
 
 	return array;
 }
+
+export const chain = (...functions) => (...args) => {
+	functions.forEach(func => { func(...args) });
+}
