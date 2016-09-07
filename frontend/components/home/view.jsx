@@ -16,7 +16,7 @@ export default () => (
 		<div className="container">
 			<div className="Home-steps">
 				<div className="Home-step card Home-find">
-					<h4>1. Find an entrepreneur who does not have access to traditional loan services.</h4>
+					<h4>1. Pick amongst our list of Entrepreneurs looking for small loans to improve their lives.</h4>
 					<Icon i="search" className="HomeFind-search" />
 				</div>
 
@@ -28,7 +28,7 @@ export default () => (
 				</div>
 
 				<div className="Home-step card Home-loan">
-					<h4>3. The Loan is disbursed, the entrerpreneur does their work and repays it in time.</h4>
+					<h4>3. The Loan is disbursed, the entrepreneur does their work and repays it in time.</h4>
 					<Icon i="hourGlass" className="HomeLoan-hourGlass" />
 				</div>
 

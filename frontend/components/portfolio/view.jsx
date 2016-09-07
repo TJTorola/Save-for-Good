@@ -17,7 +17,7 @@ const rows = contributions => contributions.map(contribution => (
 export default ({ contributions }) => (
 	<div className="container">
 		<section className="card card-header">
-			<h1>Portfolio</h1>
+			<h1>Your Portfolio</h1>
 		</section>
 
 		<section className="card">

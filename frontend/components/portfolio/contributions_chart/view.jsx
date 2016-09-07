@@ -3,8 +3,15 @@ import { Line } from 'react-chartjs-2';
 
 import { toArray } from 'utilities/helper';
 
+const labels = contributions => {
+	let labels = Object.keys(contributions);
+	labels.pop();
+	labels.push("Now");
+	return labels;
+}
+
 const chartData = contributions => ({
-	labels: Object.keys(contributions),
+	labels: labels(contributions),
 	datasets: [
 		{
 			label: "Contributions ($)",

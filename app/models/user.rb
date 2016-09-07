@@ -35,11 +35,10 @@ class User < ActiveRecord::Base
 
 	def contributions_by_month
 		months = {}
-		11.times do |i|
+		12.times do |i|
 			month = (11 - i).months.ago.strftime("%B")
 			months[month] = 0
 		end
-		months[:now] = 0
 
 		contributions.each do |contribution|
 			next if contribution.created_at < 12.months.ago
@@ -52,9 +51,9 @@ class User < ActiveRecord::Base
 	end
 
 	def repayments_by_month
-		months = { now: 0 }
-		11.times do |i|
-			month = (i + 1).months.from_now.strftime("%B")
+		months = {}
+		12.times do |i|
+			month = (i).months.from_now.strftime("%B")
 			months[month] = 0
 		end
 
