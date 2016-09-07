@@ -9,4 +9,12 @@ class Loan < ActiveRecord::Base
 		:delinquent,
 		:defaulted 
 	]
+
+	def contributed
+		contributed = 0
+		contributions.each do |contribution|
+			contributed += contribution.amount
+		end
+		contributed
+	end
 end

@@ -6,6 +6,7 @@ json.loan do
 	json.endDate @loan.end_date
 	json.loanLength @loan.loan_length
 	json.paymentPeriodLength @loan.payment_period_length
+	json.contributed @loan.contributed
 	json.entrepreneur do
 		json.id @loan.user.id
 		json.name @loan.user.name
