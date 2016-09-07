@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
 	validates :password_digest, :name, presence: true
 	validates :session_token, :email, presence: true, uniqueness: true
 
-	has_many :contributions
 	has_many :payments
 
 	def self.find_by_credentials(params)
