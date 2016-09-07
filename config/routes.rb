@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 		resource :user, only: [:create]
 		resource :session, only: [:create, :destroy]
 		resources :loans, only: [:index, :show]
+		resources :contributions, only: [:index]
 		resources :payments, only: [:create]
 	end
 
