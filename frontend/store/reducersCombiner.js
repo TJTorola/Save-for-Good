@@ -12,7 +12,7 @@ import step             from 'reducers/checkout/step';
 import donation         from 'reducers/checkout/donation';
 import newContributions from 'reducers/checkout/contributions';
 
-export default combineReducers({ 
+const appReducer = combineReducers({ 
 	user,
 	errors,
 	loans,
@@ -26,3 +26,12 @@ export default combineReducers({
 		donation
 	})
 });
+
+export default (state, action) => {
+	switch (action.type) {
+		case "DESTROY_SESSION":
+			state = undefined;
+	}
+
+	return appReducer(state, action);
+}

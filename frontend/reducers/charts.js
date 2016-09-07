@@ -8,7 +8,9 @@ const receiveRepaymentsByMonth = (state, repaymentsByMonth) => {
 	return merge({}, state, { repaymentsByMonth });
 }
 
-export default (state = { contributionsByMonth: null, repaymentsByMonth: null }, action) => {
+const defaultState = { contributionsByMonth: null, repaymentsByMonth: null };
+
+export default (state = defaultState, action) => {
 	switch (action.type) {
 		case "RECEIVE_CONTRIBUTIONS_BY_MONTH":
 			return receiveContributionsByMonth(state, action.contributionsByMonth);

@@ -2,13 +2,14 @@ import { browserHistory } from 'react-router';
 
 import sessionApi from 'utilities/api/session';
 import { receiveUser, removeUser } from 'actions/user';
+import { go } from 'utilities/helper';
 
 const createSession = (api, store, action) => {
 	let promise = api.post(action.user);
 
 	promise.done(response => {
 		store.dispatch(receiveUser(response.user));
-		browserHistory.push('portfolio');
+		go('/portfolio')();
 	});
 }
 
@@ -16,8 +17,7 @@ const destroySession = (api, store) => {
 	let promise = api.destroy();
 
 	promise.done(() => {
-		store.dispatch(removeUser());
-		browserHistory.push('login');
+		go('/login')();
 	});
 }
 

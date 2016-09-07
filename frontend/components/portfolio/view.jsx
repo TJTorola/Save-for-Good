@@ -1,7 +1,8 @@
 import React from 'react';
-import { Line } from 'react-chartjs';
 
 import { toCurrency } from 'utilities/helper';
+import ContributionsChart from './contributions_chart/container';
+import RepaymentsChart from './repayments_chart/container';
 
 const rows = contributions => contributions.map(contribution => (
 	<tr key={ contribution.id }>
@@ -37,7 +38,7 @@ export default ({ contributions }) => (
 				</tbody>
 			</table>
 
-			
+			<RepaymentsChart />
 		</section>
 	</div>
 );

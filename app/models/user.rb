@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
 	def contributions_by_month
 		months = {}
 		12.times do |i|
-			month = i.months.ago.strftime("%B")
+			month = (11 - i).months.ago.strftime("%B")
 			months[month] = 0
 		end
 
