@@ -33,6 +33,23 @@ class User < ActiveRecord::Base
 		BCrypt::Password.new(self.password_digest).is_password?(password)
 	end
 
+	def contributions_by_month
+		months = {}
+		12.times do |i|
+			month = i.months.ago.strftime("%B")
+			months[month] = 0
+		end
+
+		contributions.each do |contribution|
+			next if contribution.created_at < 12.months.ago
+
+			month = contribution.created_at.strftime("%B")
+			months[month] += (contribution.amount.to_f / 100)
+		end
+
+		months
+	end
+
 	private
 
 	def downcase_email

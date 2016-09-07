@@ -21,3 +21,4 @@ json.contributions do
 		end
 	end
 end
+json.contributionsByMonth current_user.contributions_by_month
