@@ -43,8 +43,8 @@ export default ({ contributions }) => {
 		return (
 			<Line 
 				data={ chartData(contributions) } 
-				options={ {} } 
-				width="600" height="150"
+				options={ {} }
+				width={ 600 } height={ 200 }
 			/>
 		)
 	} else {

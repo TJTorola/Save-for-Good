@@ -1,15 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import { go } from 'utilities/helper'
+import { go, toArray } from 'utilities/helper'
 import { Icon } from 'modules/index';
 
-const logoffLink = (logoff, user) => (
-	<section>
-		<Link to="/settings" className="Header-link">{ user.name }</Link>
-		<button className="orange" onClick={ logoff }>Logoff</button>
-	</section>
-)
+const logoffLink = ({ user, logoff, contributions }) => {
+	let count = toArray(contributions).length
+	if (count > 0) {
+		return (
+			<section>
+				<Link to="/checkout" className="Header-link">
+					<span className="badge">{ count }</span> Checkout
+				</Link>
+				<button className="orange" onClick={ logoff }>Logoff, { user.name }</button>
+			</section>
+		)
+	} else {
+		return (
+			<section>
+				<button className="orange Header-button" onClick={ logoff }>Logoff, { user.name }</button>
+			</section>
+		)
+	}
+}
 
 const loginLinks = (
 	<section>
@@ -20,7 +33,7 @@ const loginLinks = (
 	</section>
 )
 
-export default ({ user, logoff }) => (
+export default (props) => (
 	<header className="Header bg-white u-full-width">
 		<nav className="Header-nav container u-height-lg flex f-between">
 			<div className="flex f-between u-full-width u-full-height">
@@ -37,7 +50,7 @@ export default ({ user, logoff }) => (
 					<Icon i="s4g"/>
 				</div>
 
-				{ user ? logoffLink(logoff, user) : loginLinks }
+				{ props.user ? logoffLink(props) : loginLinks }
 			</div>
 		</nav>
 	</header>

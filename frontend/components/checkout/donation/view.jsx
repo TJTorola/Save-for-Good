@@ -26,7 +26,11 @@ const name = contributions => {
 	let first;
 	for (first in contributions) break;
 
-	return contributions[first].loan.name;
+	if (first) {
+		return ` like ${contributions[first].loan.name}`;
+	} else {
+		return '';
+	}
 }
 
 export default ({ contributions, percent, setDonation }) => (
@@ -37,7 +41,7 @@ export default ({ contributions, percent, setDonation }) => (
 					<h2 className="Donate-title">Help Save for Good</h2>
 					<div className="Donate-pitch">
 						Save for Good works hard to keep people in the field in order to maintain respectful<br />
-						relationships directly with entrepreneurs like { name(contributions) }. If you appriciate our work, one<br />
+						relationships directly with entrepreneurs{ name(contributions) }. If you appriciate our work, one<br />
 						thing you can do to help us keep going is to donate a portion of your returns<br />
 						back to Save for Good at the end of your Entrepreneurs Loan cycle.<br />
 						<br />

@@ -37,6 +37,13 @@ h1, h2, h3, h4 {
 	margin-right: 0;
 }
 
+.badge {
+  height: 2rem;
+  color: white;
+  background: black;
+  border-radius: 2rem;
+  padding: 0 1rem;
+}
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -56,6 +63,10 @@ h1, h2, h3, h4 {
 
 .Header-icon {
 	height: 100%;
+}
+
+.Header-button {
+	margin-top: .6rem;
 }
 
 .Header-icon:hover {
@@ -81,6 +92,10 @@ h1, h2, h3, h4 {
 .Header-link:hover {
 	color: #F75C03;
 	border-bottom: .5rem solid #F75C03; 
+}
+
+.Header-link:hover .badge {
+	background: #F75C03;
 }
 
 /* Content

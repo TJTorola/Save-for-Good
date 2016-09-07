@@ -44,7 +44,7 @@ export default ({ repayments }) => {
 			<Line 
 				data={ chartData(repayments) } 
 				options={ {} } 
-				width="600" height="150"
+				width={ 600 } height={ 200 }
 			/>
 		)
 	} else {
