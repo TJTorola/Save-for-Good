@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 	validates :session_token, :email, presence: true, uniqueness: true
 
 	has_many :payments
+	has_many :contributions
 
 	def self.find_by_credentials(params)
 		email = params[:email].downcase
