@@ -15,6 +15,8 @@ export default (state = {}, action) => {
 	switch (action.type) {
 		case "ADD_CONTRIBUTION":
 			return addContribution(state, action.contribution);
+		case "CLEAR_CHECKOUT":
+			return {};
 		default:
 			return state;
 	}

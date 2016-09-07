@@ -12,3 +12,7 @@ export const setDonation = percent => ({
 	type: "SET_DONATION",
 	percent
 });
+
+export const clearCheckout = () => ({
+	type: "CLEAR_CHECKOUT"
+});

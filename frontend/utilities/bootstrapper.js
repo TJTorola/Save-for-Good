@@ -1,9 +1,10 @@
 import { parseJSON } from 'jquery';
 
-import { setStep }      from 'actions/checkout';
-import { receiveUser }  from 'actions/user';
-import { requestLoan }  from 'actions/loan';
-import { requestLoans } from 'actions/loans';
+import { setStep }        from 'actions/checkout';
+import { receiveUser }    from 'actions/user';
+import { destroySession } from 'actions/session';
+import { requestLoan }    from 'actions/loan';
+import { requestLoans }   from 'actions/loans';
 
 class Bootstrapper {
 	constructor(store) {
@@ -20,6 +21,8 @@ class Bootstrapper {
 		if (user) {
 			let content = parseJSON(user.getAttribute('content'));
 			this.store.dispatch(receiveUser(content.user));
+		} else {
+			this.store.dispatch(receiveUser(null));
 		}
 	}
 
