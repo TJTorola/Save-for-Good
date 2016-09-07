@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { chain } from 'utilities/helper';
 
 import App           from './app/view';
+import Home          from './home/view';
 import Login         from './login/container';
 import Register      from './register/container';
 import Checkout      from './checkout/container';
@@ -19,6 +20,8 @@ export default ({ store }) => {
 	<Router history={ browserHistory }>
 		<Route path="/" component={ App } 
 			onEnter={ bootstrap.user }>
+			<IndexRoute component={Home}/>
+
 			<Route path="login" component={ Login } />
 			<Route path="register" component={ Register } />
 			<Route path="entrepreneurs" component={ Entrepreneurs } 

@@ -175,6 +175,13 @@ h1, h2, h3, h4 {
 	padding: .5rem;
 }
 
+.card-header svg {
+	height: 5rem;
+	fill: white;
+	position: relative;
+	top: .8rem;
+}
+
 /* Button */
 
 .card-button {
@@ -234,6 +241,122 @@ h1, h2, h3, h4 {
 
 .card-button.black:hover, .card-button.black:focus {
 	background: #707070;
+}
+
+/* Home
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.Home {
+	padding: 2rem 0;
+}
+
+.Home-splash {
+	position: relative;
+	top: -2rem;
+	background: url('//res.cloudinary.com/tjcloud/image/upload/banner.jpeg');
+	height: 80rem;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Home-splash svg {
+	height: 20rem;
+	fill: white;
+}
+
+.Home-splash h2 {
+	font-family: 'Patua One', cursive;
+	color: white;
+	text-shadow: .3rem .3rem 0 rgba(0,0,0,0.4);
+	letter-spacing: .2rem;
+	margin-left: 2rem;
+}
+
+.Home-header {
+  position: relative;
+  top: -2rem;
+}
+
+.Home-steps {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 2rem;
+}
+
+.Home-step {
+	overflow: hidden;
+	position: relative;
+	width: 35rem;
+	height: 15rem;
+	margin: 1rem;
+}
+
+.Home-step h4 {
+	font-size: 2.3rem;
+	z-index: 1;
+	position: relative;
+}
+
+.Home-step svg {
+	z-index: 0;
+	position: absolute;
+	fill: #e6e6e6;
+}
+
+.HomeFind-search {
+	height: 30rem;
+	top: -7rem;
+	left: 14rem;
+}
+
+.HomeInvest-userOne {
+	left: -4rem;
+	top: 5rem;
+	height: 19rem;
+}
+
+.HomeInvest-arrow {
+	left: 14.5rem;
+	top: 7rem;
+	height: 12rem;
+}
+
+.HomeInvest-userTwo {
+	left: 28rem;
+	top: 2rem;
+	height: 13rem;
+}
+
+.HomeLoan-hourGlass {
+	height: 21rem;
+	left: 24rem;
+	top: 1rem;
+}
+
+.HomeReturn-userOne {
+	left: 1rem;
+	top: 3rem;
+	height: 13rem;
+}
+
+.HomeReturn-arrow {
+	left: 14.5rem;
+	top: 7rem;
+	height: 12rem;
+}
+
+.HomeReturn-userTwo {
+	left: 25rem;
+	top: 5rem;
+	height: 19rem;
+}
+
+.Home-signin {
+	margin: 2rem auto;
+	width: 60rem;
 }
 
 /* Loans
@@ -508,8 +631,8 @@ h1, h2, h3, h4 {
 
 .ConfirmTotal-label {
 	flex-grow: 1;
-  text-align: right;
-  padding-right: 3rem;
+	text-align: right;
+	padding-right: 3rem;
 }
 
 .ConfirmTotal-amount {
@@ -545,24 +668,24 @@ h1, h2, h3, h4 {
 }
 
 .Donate-tree {
-  fill: #dce8dd;
-  position: absolute;
-  z-index: 0;
-  left: -21rem;
-  top: -14rem;
-  height: 152%;
+	fill: #dce8dd;
+	position: absolute;
+	z-index: 0;
+	left: -21rem;
+	top: -14rem;
+	height: 152%;
 }
 
 .Donate-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 1;
-  position: absolute;
-  padding: 3rem 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 1;
+	position: absolute;
+	padding: 3rem 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
 }
 
 .Breakdown-labels {
@@ -603,5 +726,5 @@ h1, h2, h3, h4 {
 }
 
 .Portfolio-chart {
-	margin-top: 2rem;
+	margin: 2rem 0;
 }
