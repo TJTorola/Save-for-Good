@@ -601,3 +601,7 @@ h1, h2, h3, h4 {
 .Portfolio-table {
 	width: 100%;
 }
+
+.Portfolio-chart {
+	margin-top: 2rem;
+}

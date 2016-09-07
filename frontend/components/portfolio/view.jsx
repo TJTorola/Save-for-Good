@@ -14,8 +14,6 @@ const rows = contributions => contributions.map(contribution => (
 	</tr>
 ));
 
-// const chartOptions()
-
 export default ({ contributions }) => (
 	<div className="container">
 		<section className="card card-header">
@@ -37,8 +35,16 @@ export default ({ contributions }) => (
 					{ rows(contributions) }
 				</tbody>
 			</table>
+		</section>
 
+		<section className="card Portfolio-chart">
+			<h3>Repayments by Month</h3>
 			<RepaymentsChart />
+		</section>
+
+		<section className="card Portfolio-chart">
+			<h3>Contributions by Month</h3>
+			<ContributionsChart />
 		</section>
 	</div>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line } from 'react-chartjs';
+import { Line } from 'react-chartjs-2';
 
 import { toArray } from 'utilities/helper';
 
@@ -7,9 +7,9 @@ const chartData = contributions => ({
 	labels: Object.keys(contributions),
 	datasets: [
 		{
-			label: "Contribution Amount by Month",
+			label: "Contributions ($)",
 			fill: false,
-			lineTension: 0.9,
+			lineTension: 0.1,
 			backgroundColor: "rgba(75,192,192,0.0)",
 			borderColor: "rgba(75,192,192,1)",
 			borderCapStyle: 'butt',
@@ -37,7 +37,7 @@ export default ({ contributions }) => {
 			<Line 
 				data={ chartData(contributions) } 
 				options={ {} } 
-				width="600" height="250"
+				width="600" height="150"
 			/>
 		)
 	} else {
