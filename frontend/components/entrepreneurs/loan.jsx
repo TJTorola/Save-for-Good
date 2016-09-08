@@ -44,7 +44,7 @@ export default ({ loan }) => (
 		</div>
 
 		<div className="card LoansItem-meter">
-			<span className="LoansMeter-fill" style={ meterWidth(loan) }>
+			<span className="LoansMeter-fill u-grow-right" style={ meterWidth(loan) }>
 				<span className={ meterStyle(loan) }>{ meterStatus(loan) }</span>
 			</span>
 		</div>

@@ -76,7 +76,7 @@ class Lightbox extends React.Component {
 					<div>How much would you like to contribute?</div>
 
 					<h2>
-						{ toCurrency(loan.amount) } remains to fill<br />
+						{ toCurrency(loan.amount - loan.contributed) } remains to fill<br />
 						{ loan.name }'s loan.
 					</h2>
 

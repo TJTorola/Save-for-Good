@@ -1,5 +1,6 @@
-import loansApi          from 'utilities/api/payments';
+import paymentsApi       from 'utilities/api/payments';
 import { toArray }       from 'utilities/helper';
+import { clearLoans }    from 'actions/loans';
 import { clearCheckout } from 'actions/checkout';
 
 const addPayment = (api, store, action) => {
@@ -12,12 +13,13 @@ const addPayment = (api, store, action) => {
 	});
 
 	promise.done(response => {
-		store.dispatch(clearCheckout())
+		store.dispatch(clearCheckout());
+		store.dispatch(clearLoans());
 	});
 }
 
 export default store => next => action => {
-	let api = new loansApi(store.dispatch);
+	let api = new paymentsApi(store.dispatch);
 
 	switch (action.type) {
 		case "ADD_PAYMENT":

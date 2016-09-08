@@ -37,7 +37,7 @@ export default ({ loan }) => {
 
 				<section className="LoanPitch">
 					<div className="LoanPitch-meter">
-						<div className="LoanPitch-fill" style={ meterWidth(loan) } />
+						<div className="LoanPitch-fill u-grow-right" style={ meterWidth(loan) } />
 					</div>
 					<div className="container u-clearfix">
 						<h2>{ toCurrency(loan.amount) }</h2>
