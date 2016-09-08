@@ -38,11 +38,11 @@ h1, h2, h3, h4 {
 }
 
 .badge {
-  height: 2rem;
-  color: white;
-  background: black;
-  border-radius: 2rem;
-  padding: 0 1rem;
+	height: 2rem;
+	color: white;
+	background: black;
+	border-radius: 2rem;
+	padding: 0 1rem;
 }
 
 /* Header
@@ -290,8 +290,8 @@ h1, h2, h3, h4 {
 }
 
 .Home-header {
-  position: relative;
-  top: -2rem;
+	position: relative;
+	top: -2rem;
 }
 
 .Home-steps {
@@ -428,10 +428,17 @@ h1, h2, h3, h4 {
 	box-shadow: .2rem .2rem 0 0 rgba(0,0,0,0.2);
 }
 
-.LoansMeter-status {
+.LoansMeter-halfFull {
 	color: white;
 	position: absolute;
 	right: .5rem;
+}
+
+.LoansMeter-halfEmpty {
+	width: 25rem;
+	position: absolute;
+	top: .2rem;
+	left: 1rem;
 }
 
 /* Loan
