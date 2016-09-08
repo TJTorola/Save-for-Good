@@ -5,7 +5,8 @@ import { requestLoans } from 'actions/loans';
 
 const mapStateToProps = state => ({
 	loans: state.loans.collection,
-	loading: state.loans.request.loading
+	loading: state.loans.request.loading,
+	fullyLoaded: state.loans.request.fullyLoaded
 });
 
 const mapDispatchToProps = dispatch => ({

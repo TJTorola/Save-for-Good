@@ -12,8 +12,8 @@ export const setPage = page => ({
 	page
 });
 
-export const resetPage = () => ({
-	type: "RESET_PAGE"
+export const clearLoans = () => ({
+	type: "CLEAR_LOANS"
 });
 
 export const loansLoading = () => ({
@@ -22,4 +22,8 @@ export const loansLoading = () => ({
 
 export const loansLoaded = () => ({
 	type: "LOANS_LOADED"
+});
+
+export const loansFullyLoaded = () => ({
+	type: "LOANS_FULLY_LOADED"
 });

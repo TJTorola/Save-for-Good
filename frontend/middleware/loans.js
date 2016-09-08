@@ -3,7 +3,8 @@ import {
 	receiveLoans,
 	setPage,
 	loansLoading,
-	loansLoaded
+	loansLoaded,
+	loansFullyLoaded
 } from 'actions/loans';
 
 const requestLoans = (api, store, action) => {
@@ -13,8 +14,13 @@ const requestLoans = (api, store, action) => {
 	let promise = api.get(page);
 
 	promise.done(response => {
+		if (response.loans.length === 0) {
+			store.dispatch(loansFullyLoaded());
+		} else {
+			store.dispatch(receiveLoans(response.loans));
+		}
+
 		store.dispatch(setPage(response.nextPage));
-		store.dispatch(receiveLoans(response.loans));
 		store.dispatch(loansLoaded());
 	});
 }

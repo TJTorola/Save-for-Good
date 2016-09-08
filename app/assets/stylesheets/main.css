@@ -45,6 +45,35 @@ h1, h2, h3, h4 {
 	padding: 0 1rem;
 }
 
+.u-spin {
+	-webkit-animation-name: spin;
+  -webkit-animation-duration: 3000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 3000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 3000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-transition: rotate(3600deg);
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -439,6 +468,13 @@ h1, h2, h3, h4 {
 	position: absolute;
 	top: .2rem;
 	left: 1rem;
+}
+
+.Loans-loader svg {
+	fill: #a9a9a0;
+	display: block;
+	height: 7rem;
+	margin: 4rem auto;
 }
 
 /* Loan
