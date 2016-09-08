@@ -8,16 +8,16 @@ const logoffLink = ({ user, logoff, contributions }) => {
 	let count = toArray(contributions).length
 	if (count > 0) {
 		return (
-			<section>
+			<section className="Header-userMenu">
+				<button className="orange" onClick={ logoff }>Logoff, { user.name }</button>
 				<Link to="/checkout" className="Header-link">
 					<span className="badge">{ count }</span> Checkout
 				</Link>
-				<button className="orange" onClick={ logoff }>Logoff, { user.name }</button>
 			</section>
 		)
 	} else {
 		return (
-			<section>
+			<section className="Header-userMenu">
 				<button className="orange Header-button" onClick={ logoff }>Logoff, { user.name }</button>
 			</section>
 		)
@@ -35,7 +35,7 @@ const portfolio = ({ user }) => {
 }
 
 const loginLinks = (
-	<section>
+	<section className="Header-userMenu">
 		<Link to="/register" className="Header-link">Register</Link>
 		<button className="orange" onClick={ go('/login') }>
 			Login
@@ -47,7 +47,7 @@ export default (props) => (
 	<header className="Header bg-white u-full-width">
 		<nav className="Header-nav container u-height-lg flex f-between">
 			<div className="flex f-between u-full-width u-full-height">
-				<section>
+				<section className="Header-navMenu">
 					<Link className="Header-link" to="/entrepreneurs">
 						Entrepreneurs
 					</Link>

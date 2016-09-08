@@ -116,12 +116,19 @@ h1, h2, h3, h4 {
 	box-shadow: 0 .5rem 0 0 rgba(0,0,0,0.2);
 }
 
-.Header-icon {
-	height: 100%;
+.Header-userMenu {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 31rem;
 }
 
-.Header-button {
-	margin-top: .6rem;
+.Header-navMenu {
+	width: 31rem;
+}
+
+.Header-icon {
+	height: 100%;
 }
 
 .Header-icon:hover {
@@ -497,11 +504,16 @@ h1, h2, h3, h4 {
 	right: -25.5rem;
 }
 
+.Loans-loader {
+	padding: 4rem;
+	height: 15rem;
+}
+
 .Loans-loader svg {
 	fill: #a9a9a0;
 	display: block;
 	height: 7rem;
-	margin: 4rem auto;
+	margin: 0 auto;
 }
 
 /* Loan

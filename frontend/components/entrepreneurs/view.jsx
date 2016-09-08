@@ -22,9 +22,9 @@ export default ({ loans, getLoans, loading, fullyLoaded }) => (
 
 		{ renderLoans(loans) }
 
-		<div className="Loans-loader" style={ loaderStyle(fullyLoaded) } >
+		<div className="Loans-loader" >
 			<Waypoint onEnter={ requestLoans(getLoans, loading) } />
-			<Icon i="gear" className="u-spin" />
+			<Icon i="gear" className="u-spin" style={ loaderStyle(fullyLoaded) } />
 		</div>
 	</div>
 );
