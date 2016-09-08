@@ -2,9 +2,9 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
 User.create!({
-	email: 'tyler@tjt.codes',
+	email: 'Philanthr0p1st@yahoo.com',
 	password: 'password',
-	name: 'Tyler',
+	name: 'Phil',
 });
 
 9.times do

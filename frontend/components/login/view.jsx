@@ -1,18 +1,48 @@
 import React from 'react';
 
-const userFromEvent = e => {
+import { Icon } from 'modules/index';
+
+const userFromForm = () => {
 	return {
-		email: e.target.querySelector("#email").value,
-		password: e.target.querySelector("#password").value
+		email: document.querySelector("#email").value,
+		password: document.querySelector("#password").value
 	}
 }
 
 const submit = createSession => event => {
-	event.preventDefault();
-	let user = userFromEvent(event);
+	if (event) { event.preventDefault(); }
+	let user = userFromForm();
 
 	createSession(user);
 };
+
+const GUEST_EMAIL = "Philanthr0p1st@yahoo.com";
+const GUEST_PASS = "password";
+
+const setEmail    = i => { 
+	document.querySelector("#email").value = GUEST_EMAIL.slice(0, i);
+};
+const setPassword = i => { 
+	document.querySelector("#password").value = GUEST_PASS.slice(0, i);
+};
+
+const guestLogin = createSession => () => {
+	let i = 1
+	document.querySelector("#email").value    = "";
+	document.querySelector("#password").value = "";
+
+	let interval = setInterval(() => {
+		if (i > GUEST_EMAIL.length + GUEST_PASS.length) {
+			clearInterval(interval);
+			submit(createSession)();
+		} else if (i > GUEST_EMAIL.length) {
+			setPassword(i - GUEST_EMAIL.length);
+		} else {
+			setEmail(i);
+		}
+		i++;
+	}, 10);
+}
 
 export default ({ createSession }) => (
 	<div className="container">
@@ -20,18 +50,24 @@ export default ({ createSession }) => (
 			<h1>Login</h1>
 		</section>
 
-		<section className="card">
-			<form className="u-mar-no" onSubmit={ submit(createSession) }>
+		<form className="u-mar-no" id="form" onSubmit={ submit(createSession) }>
+			<section className="card">
 				<label htmlFor="email">Email:</label>
 				<input type="email" id="email" className="u-full-width" />
 
 				<label htmlFor="password">Password:</label>
 				<input type="password" id="password" className="u-full-width" />
+			</section>
 
-				<hr />
 
-				<button type="submit" className="u-full-width">Login</button>
-			</form>
-		</section>
+			<div className="toolbar">
+				<div className="card-button black" onClick={ guestLogin(createSession) }>
+					<Icon i='user' /> Login as Guest
+				</div>
+				<button type="submit" className="card-button green">
+					<Icon i='signIn' /> Login
+				</button>
+			</div>
+		</form>
 	</div>
 );
