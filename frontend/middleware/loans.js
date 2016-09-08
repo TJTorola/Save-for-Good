@@ -1,11 +1,21 @@
 import loansApi from 'utilities/api/loans';
-import { receiveLoans } from 'actions/loans';
+import { 
+	receiveLoans,
+	setPage,
+	loansLoading,
+	loansLoaded
+} from 'actions/loans';
 
 const requestLoans = (api, store, action) => {
-	let promise = api.get();
+	store.dispatch(loansLoading());
+
+	let page = store.getState().loans.request.page;
+	let promise = api.get(page);
 
 	promise.done(response => {
+		store.dispatch(setPage(response.nextPage));
 		store.dispatch(receiveLoans(response.loans));
+		store.dispatch(loansLoaded());
 	});
 }
 

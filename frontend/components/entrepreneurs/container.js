@@ -4,11 +4,12 @@ import Entrepreneurs from './view';
 import { requestLoans } from 'actions/loans';
 
 const mapStateToProps = state => ({
-	loans: state.loans
+	loans: state.loans.collection,
+	loading: state.loans.request.loading
 });
 
 const mapDispatchToProps = dispatch => ({
-	getLoans: id => dispatch(requestLoans(id))
+	getLoans: () => dispatch(requestLoans())
 });
 
 export default connect(

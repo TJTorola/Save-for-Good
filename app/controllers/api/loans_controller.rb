@@ -14,6 +14,6 @@ class Api::LoansController < ApplicationController
 	private
 
 	def current_page
-		@current_page = params[:page] || 0
+		@current_page = params[:page].to_i || 0
 	end
 end

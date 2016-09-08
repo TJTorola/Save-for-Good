@@ -24,8 +24,7 @@ export default ({ store }) => {
 
 			<Route path="login" component={ Login } />
 			<Route path="register" component={ Register } />
-			<Route path="entrepreneurs" component={ Entrepreneurs } 
-				onEnter={ bootstrap.loans } />
+			<Route path="entrepreneurs" component={ Entrepreneurs } />
 			<Route path="entrepreneur/:id" component={ Entrepreneur } 
 				onEnter={ bootstrap.loan } />
 			<Route path="portfolio" component={ Portfolio } 
