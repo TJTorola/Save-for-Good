@@ -4,7 +4,7 @@
 [Save for Good][link] is a crowdsourced Micro-Lending similar to the Kiva. Parternered with Maple Microfinance Save for Good is able to find Entrepreneurs who do not have access to traditional loan services and connect them with people who are willing to finance their loans.
 
 ##Framework & APIs
-Save for Good (S4G) is a single page web app built with React-Redux and a Ruby on Rails backend. It uses Charts.js to render loan statistics, and the Stripe API to handle transactions.
+Save for Good (S4G) is a single page web app built with React-Redux and a Ruby on Rails backend. It uses Charts.js to render loan statistics, the Google Maps static API for maps, and the Stripe API to handle transactions.
 
 ##Features
 
