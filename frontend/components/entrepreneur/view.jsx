@@ -11,7 +11,11 @@ const mapStyle = loc => ({
 const lightboxOptions = (loan) => ({
 	amount: 0,
 	name: loan.entrepreneur.name
-})
+});
+
+const meterWidth = (loan) => ({
+	width: `${100 * (loan.contributed / loan.amount)}%`
+});
 
 export default ({ loan }) => {
 	if (loan) {
@@ -33,7 +37,7 @@ export default ({ loan }) => {
 
 				<section className="LoanPitch">
 					<div className="LoanPitch-meter">
-						<div className="LoanPitch-fill" />
+						<div className="LoanPitch-fill" style={ meterWidth(loan) } />
 					</div>
 					<div className="container u-clearfix">
 						<h2>{ toCurrency(loan.amount) }</h2>
