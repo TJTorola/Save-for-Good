@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { chain } from 'utilities/helper';
 
 import App           from './app/view';
-import Home          from './home/view';
+import Home          from './home/container';
 import Login         from './login/container';
 import Register      from './register/container';
 import Checkout      from './checkout/container';

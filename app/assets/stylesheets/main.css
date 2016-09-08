@@ -470,12 +470,12 @@ h1, h2, h3, h4 {
 }
 
 .LoansItem-meter {
+	overflow: hidden;
 	padding: .5rem;
 	height: 2.5rem;
 }
 
 .LoansMeter-fill {
-	overflow: hidden;
 	display: inline-block;
 	background: #3a9600;
 	position: relative;

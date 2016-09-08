@@ -1,8 +1,27 @@
 import React from 'react';
 
+import { go } from 'utilities/helper';
 import { Icon } from 'modules/index';
 
-export default () => (
+const loginButton = user => {
+	if (user) {
+		return (
+			<div className="card-button green Home-signin" onClick={ go('/entrepreneurs') }>
+				<Icon i="s4g" />
+				Browse Entrepreneurs
+			</div>
+		);
+	} else {
+		return (
+			<div className="card-button green Home-signin" onClick={ go('/login') }>
+				<Icon i="signIn" />
+				Sign in as a Guest
+			</div>
+		);
+	}
+}
+
+export default ({ user }) => (
 	<div>
 		<div className="Home-splash">
 			<Icon i="s4g" />
@@ -40,10 +59,7 @@ export default () => (
 				</div>
 			</div>
 
-			<div className="card-button green Home-signin">
-				<Icon i="signIn" />
-				Sign in as a Guest
-			</div>
+			{ loginButton(user) }
 		</div>
 	</div>
 );
