@@ -17,3 +17,4 @@ json.loans do
 		end
 	end
 end
+json.nextPage (@current_page + 1)
