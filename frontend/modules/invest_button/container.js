@@ -4,7 +4,8 @@ import InvestButton from './view';
 import { showLightbox } from 'actions/lightbox';
 
 const mapStateToProps = state => ({
-	contributions: state.checkout.contributions
+	contributions: state.checkout.contributions,
+	user: state.user
 });
 const mapDispatchToProps = dispatch => ({
 	showLightbox: loan => { dispatch(showLightbox(loan)) }

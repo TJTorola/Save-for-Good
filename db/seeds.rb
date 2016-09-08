@@ -164,6 +164,120 @@ Lusia requested a loan to buy chemicals, banana tubes (seedlings), taro roots (s
 She became a member of SPBD in 2012.
 		ABOUT
 	},
+	{
+		name: "Edik",
+		email: Faker::Internet.free_email("Edik"),
+		password: Faker::Internet.password,
+		location: "Gegharkunik region, Armenia",
+		about: <<-ABOUT
+Edik paid back his first Kiva loan, which greatly supported him in his farming. He lives in the Gegharkunik region of Armenia. His wife died several years ago, and he lives with his disabled son. Edik cares for his son, house and farm by himself. 
+
+Edik has cows, a pig and several piglets. He earns an income mainly from his swine breeding and farming wheat. He sells his farm’s meat to butchers in the area. He works hard but still earns barely enough to properly care for his son. Edik is asking for this loan of 700,000 Armenian drams as he needs to buy a lot of fodder for all his farm cattle.
+		ABOUT
+	},
+	{
+		name: "Jose",
+		email: Faker::Internet.free_email("Jose"),
+		password: Faker::Internet.password,
+		location: "Cajamarca, Peru",
+		about: <<-ABOUT
+Jose Niguer, who is 21 years old, lives in a civil partnership. He lives in his own home, made of rustic materials, with his spouse and their child in the Santo Tomas district of the Cutervo province in the Cajamarca department of Peru. He has very good personal and professional references from the other people who live in the area. The majority of people living in the vicinity make a living in agriculture, commerce and livestock raising. Jose makes a living through agriculture, more specifically the farming of catimor coffee. To date he has 1.5 hectares, resistant to illness and plagues, as well as over 10 years of experience in the field. Additionally, he earns an income raising and selling small farm animals like chicks and chickens. Finally, he also works in the growing of products that bring forth bread (yuca, plaintain, vituca). The destination for the loan will be to invest in the maintenance of the 1.5 hectare crop of coffee currently in production, ensuring a good production for the 2017 campaign, which will be reflected in a larger volume of sales and subsequently more income to improve his and his family's quality of life. Jose Niguer is a recurrent partner for Edpyme Alternativa.
+		ABOUT
+	},
+	{
+		name: "Nafeth",
+		email: Faker::Internet.free_email("Nafeth"),
+		password: Faker::Internet.password,
+		location: "Jabalia, Palestine",
+		about: <<-ABOUT
+Nafeth is a 28-year-old married man from Jabalia, which is a refugee camp. He lives with his wife and one son in a humble house. Nafeth works in the public sector, but it is very limited and unstable salary. He has small piece of land on which he farms vegetables. He took a USD Murabaha loan from FATEN to buy seedlings and seeds for his small farm. He appears in the photo.
+		ABOUT
+	},
+	{
+		name: "Melchora",
+		email: Faker::Internet.free_email("Melchora"),
+		password: Faker::Internet.password,
+		location: "Antique, Philippines",
+		about: <<-ABOUT
+Melchora is 57 years old and widowed with five children.
+
+She earns a living by pig fattening business in the Philippines. Melchora is borrowing PHP 9,000 through NWTF to buy additional piglets as well as a sack of feed and other supplies to raise her pigs.
+
+Melchora has been in this business for 10 years and also earns additional income from a general store.
+
+She is working tirelessly toward the attainment of her dream: to save money to expand her business.
+		ABOUT
+	},
+	{
+		name: "Jessa",
+		email: Faker::Internet.free_email("Jessa"),
+		password: Faker::Internet.password,
+		location: "Louisville, KY, United States",
+		about: <<-ABOUT
+I am Jessa Mayhew, the Owner + Dreamer + Curator of Soul Candy Skincare, keeper of a gypsy soul and sparkling eyes (according to my husband). I grew up in Pennsylvania about an hour from NYC, daughter of Italian and Russian parents who taught me that anything made by hand is an extension of yourself, that a dinner made with love really does taste better. That is perhaps the most poignant precept of my youth and one that I carry with me today. I think that’s a lot of the reason that Soul Candy is so successful. I put my heart into every bottle. Before I started bottling eco-chic love, I was a health and fitness coach for the US Military for about 10 years. It was during this time that my passion for healthy, sustainable living really began to blossom. I saw first hand the incredibly positive impact that natural diets and treatments free of chemicals and processing can have on the human body. Forever thirsting for knowledge, I spent years studying and researching and experimenting with natural remedies. When my oldest developed severe childhood eczema, brain candy turned into Soul Candy. The other half of our family and Soul Candy team, my husband, Ben, has a B.S. from West Point and an M.A. from UTEP. We are a perfect match in so many ways, like the fact that he does my numbers because I hate math - to me, an unfortunately inextricable part of business. Our final military move landed us in Louisville, KY, but the people of Louisville made us stay. Now, I get to educate those same people on self-care and the importance of conscious consumerism. The people that we meet, the glows that we uncover, the bonds we form… that’s what keeps me going.
+		ABOUT
+	},
+	{
+		name: "Fridah",
+		email: Faker::Internet.free_email("Fridah"),
+		password: Faker::Internet.password,
+		location: "Ibanda, Uganda",
+		about: <<-ABOUT
+Fridah is a repeat borrower of UGAFODE Microfinance Limited. She deals in cattle fattening and milking as her major source of income. She currently owns about 100 head of cattle, the majority of which are for milk production. Through income earned from milk sales, Fridah has managed to look after her family together with her husband by providing them with the basic necessities of life and educating their four children. 
+
+In addition to dairy farming, Fridah owns a retail shop in a trading center near her residence. She started this business because she wanted to provide quick service to people of her community. 
+
+Fridah is applying for another loan of 5,000,000 UGX to buy more stock of items that have quick sales such as sugar, soap, salt, soda and corn flour to boost her sales. She is appreciative of your continued support and looks toward a bigger business.
+		ABOUT
+	},
+	{
+		name: "Cristina",
+		email: Faker::Internet.free_email("Cristina"),
+		password: Faker::Internet.password,
+		location: "Floresti, Moldova",
+		about: <<-ABOUT
+Cristina is a young woman of 27 years. She is married, and she works as an accountant at the mayoralty, and her husband works abroad. With the money they received at their wedding party, they have bought an old house, and they started to renovate it. She has saved money from her salary, and from the money her husband sends, they succeeded in repairing the roof of the house, bedroom, and living room. Cristina wants a lot to equip her house with water and sewerage to be able to further construct a bathroom, a WC, and a kitchen. This thing will simplify a lot the domesticities and will improve the living conditions. If Cristina could finish the reparation of the house, her husband could stay with his family to work home without being forced to go abroad. All these plans of Cristina’s are realizable only with the credit from Kiva.
+		ABOUT
+	},
+	{
+		name: "Demur",
+		email: Faker::Internet.free_email("Demur"),
+		password: Faker::Internet.password,
+		location: "Zugdidi, Georgia",
+		about: <<-ABOUT
+Demur is 59 years old. He is married and lives with his family in the Zugdidi district. Demur is involved in agricultural activities. In particular, he owns 2 cows and a calf. His wife milks the cows every day and produces dairy products to sell locally. In addition, they have a plot of agricultural land where they grow nut trees and sell the harvest locally.
+
+Demur decided to start taxi business to have a more stable income. The Start Up program, which is a joint initiative with Kiva and Credo enables him to get a loan of 1,500 GEL. With the received credit he will purchase a car and will serve people as a taxi driver.
+
+Demur awaits your support.
+		ABOUT
+	},
+	{
+		name: "Fuamata",
+		email: Faker::Internet.free_email("Fuamata"),
+		password: Faker::Internet.password,
+		location: "Saasaai, Samoa",
+		about: <<-ABOUT
+Fuamata is 64 years old and a widow with five grown children. 
+
+She makes and sells Elei Lavalava to earn a living and has been doing this for two years. 
+
+Fuamata has requested a loan to buy materials, design board, paint brush, color paints etc. 
+
+She plans to use her profits to support her family financially and to improve her family living. 
+
+She joined SPBD in 2014 to gain access to financial services.
+		ABOUT
+	},
+	{
+		name: "Ryan",
+		email: Faker::Internet.free_email("Ryan"),
+		password: Faker::Internet.password,
+		location: "Cumberland Gap, TN, United States",
+		about: <<-ABOUT
+I live and manage my shop in the breathtaking Appalachian region surrounded by the Daniel Boone National Park in Cumberland Gap, Tennessee. This is a big change from busy Kansas City, Missouri where I lived until my move to Tennessee. While in Kansas City I owned and managed a motorcycle repair shop. Shortly after I moved from Kansas City, to Cumberland Gap, Tennessee in 2015, I met my neighbor William Brock, a traditional blacksmith and the owner of Rusted Bird Studio. Under his instruction, I learned the art of blacksmithing. Now I am blessed to manage my own shop surrounded by the breathtaking Appalachian mountains. I am a proud member of the Appalachian Area Chapter of Blacksmiths (AACB) and Artist-Blacksmith's Association of North America (ABANA). When I’m not blacksmithing, I’m exploring the area on my Harley or mountain biking. My goal in life is to work hard, stay humble, smile often, never stop learning, and always be thankful.
+		ABOUT
+	},
 ]
 
 entrepreneurs.each do |entrepreneur|
@@ -247,6 +361,86 @@ loans = [
 		user_id: 20,
 		description: "A loan of $3,900 helps to buy chemicals, banana tubes (seedlings), taro roots (seedlings), licence and registration, and a new car seat.",
 		amount: 390000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 21,
+		description: "A loan of $1,500 helps to buy a lot of fodder for all his farm cattle.",
+		amount: 150000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 22,
+		description: "A loan of $1,350 helps invest in the maintenance of 1.5 hectares for coffee production.",
+		amount: 135000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 23,
+		description: "A loan of $1,175 helps to buy seedlings and seeds for his small farm.",
+		amount: 117500,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 24,
+		description: "A loan of $200 helps to buy additional piglets as well as a sack of feed and other supplies to raise her pig.",
+		amount: 20000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 25,
+		description: "A loan of $9,950 helps us to provide opening operating costs and ultimately double the size of our business.",
+		amount: 995000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 26,
+		description: "A loan of $1,500 helps to buy retail stock items such as soda, sugar, soap, and salt.",
+		amount: 150000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 27,
+		description: "A loan of $2,050 helps to equip her house with water and sewerage.",
+		amount: 205000,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 28,
+		description: "A loan of $675 helps to purchase a car for starting a taxi business.",
+		amount: 67500,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 29,
+		description: "A loan of $1,025 helps to buy materials, design board, paint brush, color paints etc.",
+		amount: 102500,
+		end_date: Faker::Time.forward(30, :morning),
+		payment_period_length: [15, 30].sample,
+		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	},
+	{
+		user_id: 30,
+		description: "A loan of $10,000 helps develop my brand, marketing tools, and tooling for classes and expanding my product portfolio.",
+		amount: 1000000,
 		end_date: Faker::Time.forward(30, :morning),
 		payment_period_length: [15, 30].sample,
 		loan_length: [30, 60, 90, 100, 180, 365, 365].sample

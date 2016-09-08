@@ -24,6 +24,16 @@ const logoffLink = ({ user, logoff, contributions }) => {
 	}
 }
 
+const portfolio = ({ user }) => {
+	if (user) {
+		return (
+			<Link className="Header-link" to="/portfolio">
+				Portfolio
+			</Link>
+		);
+	}
+}
+
 const loginLinks = (
 	<section>
 		<Link to="/register" className="Header-link">Register</Link>
@@ -41,9 +51,7 @@ export default (props) => (
 					<Link className="Header-link" to="/entrepreneurs">
 						Entrepreneurs
 					</Link>
-					<Link className="Header-link" to="/portfolio">
-						Portfolio
-					</Link>
+					{ portfolio(props) }
 				</section>
 
 				<div onClick={ go('/') } className="Header-icon">
