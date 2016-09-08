@@ -79,9 +79,13 @@ class Lightbox extends React.Component {
 						{ toCurrency(loan.amount - loan.contributed) } remains to fill<br />
 						{ loan.name }'s loan.
 					</h2>
-
-					<label htmlFor="contribution">Your Contribution:</label>
-					<input type="text" id="contribution" value={ this.state.amount } onChange={ handleChange } />
+					
+					<div className="input Lightbox-input">
+						<label className="input-label" htmlFor="contribution">Your Contribution</label>
+						<input className="input-input" type="text" required 
+							placeholder="Your Contribution" id="contribution" 
+							value={ this.state.amount } onChange={ handleChange }/>
+					</div>
 				</div>
 				<div className="Lightbox-toolbar toolbar">
 					<div className="card-button black f-grow" onClick={ add }>

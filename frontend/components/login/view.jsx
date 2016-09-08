@@ -52,11 +52,15 @@ export default ({ createSession }) => (
 
 		<form className="u-mar-no" id="form" onSubmit={ submit(createSession) }>
 			<section className="card">
-				<label htmlFor="email">Email:</label>
-				<input type="email" id="email" className="u-full-width" />
+				<div className="input">
+					<label className="input-label" htmlFor="email">Email</label>
+					<input className="input-input" type="text" required placeholder="Email" id="email" />
+				</div>
 
-				<label htmlFor="password">Password:</label>
-				<input type="password" id="password" className="u-full-width" />
+				<div className="input">
+					<label className="input-label" htmlFor="password">Password</label>
+					<input className="input-input" type="password" required placeholder="Password" id="password" />
+				</div>
 			</section>
 
 

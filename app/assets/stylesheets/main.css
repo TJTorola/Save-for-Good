@@ -45,6 +45,65 @@ h1, h2, h3, h4 {
 	padding: 0 1rem;
 }
 
+/* Input
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.input {
+	position: relative;
+	padding-bottom: 3rem;
+	margin-top: 3rem;
+}
+
+.input-label {
+	display: block;
+	position: absolute;
+	top: 1.5rem;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	font-weight: bold;
+	color: #f8a10d;
+}
+
+.input-input {
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	padding: .5rem 0;
+	height: 3rem;
+	width: 100%;
+	border: 0;
+	outline: none;
+	border-bottom: .2rem solid #bbb;
+}
+
+.input-input:valid {
+	position: relative;
+	top: 3rem;
+	margin-top: -3rem;
+}
+
+.input-input:focus {
+	border-bottom-color: #f8a10d;
+}
+
+/* Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+	background: white;
+	border: .2rem solid #f8a10d;
+	border-radius: 1.7rem;
+	padding: .5rem 2rem;
+	color: #f8a10d;
+	outline: none;
+}
+
+.button:hover {
+	color: #F75C03;
+	border-color: #F75C03;
+}
+
 /* Animations
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -117,10 +176,10 @@ h1, h2, h3, h4 {
 }
 
 .Header-userMenu {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  width: 31rem;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	width: 31rem;
 }
 
 .Header-navMenu {
@@ -651,6 +710,11 @@ h1, h2, h3, h4 {
 
 .Lightbox-checkout {
 	width: 50%;
+}
+
+.Lightbox-input {
+	width: 40%;
+	margin: 3rem auto 0 auto;
 }
 
 /* Checkout

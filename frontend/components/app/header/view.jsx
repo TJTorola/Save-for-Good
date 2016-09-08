@@ -9,7 +9,7 @@ const logoffLink = ({ user, logoff, contributions }) => {
 	if (count > 0) {
 		return (
 			<section className="Header-userMenu">
-				<button className="orange" onClick={ logoff }>Logoff, { user.name }</button>
+				<button className="button" onClick={ logoff }>Logoff, { user.name }</button>
 				<Link to="/checkout" className="Header-link">
 					<span className="badge">{ count }</span> Checkout
 				</Link>
@@ -18,7 +18,7 @@ const logoffLink = ({ user, logoff, contributions }) => {
 	} else {
 		return (
 			<section className="Header-userMenu">
-				<button className="orange Header-button" onClick={ logoff }>Logoff, { user.name }</button>
+				<button className="button" onClick={ logoff }>Logoff, { user.name }</button>
 			</section>
 		)
 	}
@@ -36,10 +36,10 @@ const portfolio = ({ user }) => {
 
 const loginLinks = (
 	<section className="Header-userMenu">
-		<Link to="/register" className="Header-link">Register</Link>
-		<button className="orange" onClick={ go('/login') }>
+		<button className="button" onClick={ go('/login') }>
 			Login
 		</button>
+		<Link to="/register" className="Header-link">Register</Link>
 	</section>
 )
 
