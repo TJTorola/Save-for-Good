@@ -6,7 +6,7 @@ const setPage = (state, page) => {
 
 export default (state = { page: 0, loading: false, fullyLoaded: false }, action) => {
 	switch (action.type) {
-		case "SET_PAGE":
+		case "SET_LOANS_PAGE":
 			return setPage(state, action.page);
 		case "CLEAR_LOANS":
 			return merge({}, state, { page: 0, fullyLoaded: false });

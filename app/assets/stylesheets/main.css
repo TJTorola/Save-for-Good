@@ -887,6 +887,20 @@ h1, h2, h3, h4 {
 	width: 100%;
 }
 
+.PortfolioTable-pages {
+	text-align: right;
+}
+
+.PortfolioTable-pages li {
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.PortfolioTable-pages li:hover {
+  cursor: pointer;
+  color: orange;
+}
+
 .Portfolio-chart {
 	margin: 2rem 0;
 }

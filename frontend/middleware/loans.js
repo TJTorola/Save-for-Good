@@ -1,7 +1,7 @@
 import loansApi from 'utilities/api/loans';
 import { 
 	receiveLoans,
-	setPage,
+	setLoansPage,
 	loansLoading,
 	loansLoaded,
 	loansFullyLoaded
@@ -20,7 +20,7 @@ const requestLoans = (api, store, action) => {
 			store.dispatch(receiveLoans(response.loans));
 		}
 
-		store.dispatch(setPage(response.nextPage));
+		store.dispatch(setLoansPage(response.nextPage));
 		store.dispatch(loansLoaded());
 	});
 }

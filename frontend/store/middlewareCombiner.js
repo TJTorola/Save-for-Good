@@ -1,5 +1,5 @@
 import { applyMiddleware, compose } from 'redux';
-import persistState from 'redux-localstorage';
+// import persistState from 'redux-localstorage';
 
 import validator     from 'middleware/validator';
 import user          from 'middleware/user';
@@ -9,7 +9,7 @@ import loan          from 'middleware/loan';
 import payments      from 'middleware/payments';
 import contributions from 'middleware/contributions';
 
-const middleware = applyMiddleware( 
+export default applyMiddleware( 
 	validator,
 	user,
 	session,
@@ -19,11 +19,11 @@ const middleware = applyMiddleware(
 	contributions 
 );
 
-const persistanceConfig = {
-	key: 'save-for-good'
-}
+// const persistanceConfig = {
+// 	key: 'save-for-good'
+// }
 
-export default compose(
-	middleware,
-	persistState(null, persistanceConfig)
-)
+// export default compose(
+// 	middleware,
+// 	persistState(null, persistanceConfig)
+// )

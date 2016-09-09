@@ -7,6 +7,11 @@ export const receiveContributions = contributions => ({
 	contributions
 });
 
+export const setContributionsPage = page => ({
+	type: "SET_CONTRIBUTIONS_PAGE",
+	page
+})
+
 export const receiveContributionsByMonth = contributionsByMonth => ({
 	type: "RECEIVE_CONTRIBUTIONS_BY_MONTH",
 	contributionsByMonth

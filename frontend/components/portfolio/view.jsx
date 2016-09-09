@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { toCurrency } from 'utilities/helper';
+import { toCurrency, chunk } from 'utilities/helper';
 import ContributionsChart from './contributions_chart/container';
 import RepaymentsChart from './repayments_chart/container';
 
@@ -14,7 +14,17 @@ const rows = contributions => contributions.map(contribution => (
 	</tr>
 ));
 
-export default ({ contributions }) => (
+const pageLinks = (setPage, page, contributions) => {
+	let links = [];
+	let i = 0;
+
+	while (i < contributions.length / 10) {
+		links.push(<li key={ i } onClick={ setPage(i) }>{ ++i }</li>);
+	}
+	return links;
+}
+
+export default ({ contributions, page, setPage }) => (
 	<div className="container">
 		<section className="card card-header">
 			<h1>Your Portfolio</h1>
@@ -32,9 +42,12 @@ export default ({ contributions }) => (
 					</tr>
 				</thead>
 				<tbody>
-					{ rows(contributions) }
+					{ rows(chunk(contributions, page)) }
 				</tbody>
 			</table>
+			<ul className="PortfolioTable-pages">
+				{ pageLinks(setPage, page, contributions) }
+			</ul>
 		</section>
 
 		<section className="card Portfolio-chart">

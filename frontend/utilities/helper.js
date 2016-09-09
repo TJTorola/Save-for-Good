@@ -34,3 +34,9 @@ export const toArray = object => {
 export const chain = (...functions) => (...args) => {
 	functions.forEach(func => { func(...args) });
 }
+
+export const chunk = (collection, page = 1, limit = 10) => {
+	let start = page * limit;
+	let end = start + limit;
+	return collection.slice(start, end);
+}

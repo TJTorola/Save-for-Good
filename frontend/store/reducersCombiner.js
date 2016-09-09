@@ -1,30 +1,35 @@
 import { combineReducers } from 'redux';
 
-import user             from 'reducers/user';
-import loan             from 'reducers/loan';
-import charts           from 'reducers/charts';
-import errors           from 'reducers/errors';
-import lightbox         from 'reducers/lightbox';
-import contributions    from 'reducers/contributions';
+import user                    from 'reducers/user';
+import loan                    from 'reducers/loan';
+import charts                  from 'reducers/charts';
+import errors                  from 'reducers/errors';
+import lightbox                from 'reducers/lightbox';
 
-import request          from 'reducers/loans/request';
-import collection       from 'reducers/loans/collection';
+import loansRequest            from 'reducers/loans/request';
+import loansCollection         from 'reducers/loans/collection';
 
-import step             from 'reducers/checkout/step';
-import donation         from 'reducers/checkout/donation';
-import newContributions from 'reducers/checkout/contributions';
+import contributionsRequest    from 'reducers/contributions/request';
+import contributionsCollection from 'reducers/contributions/collection';
+
+import step                    from 'reducers/checkout/step';
+import donation                from 'reducers/checkout/donation';
+import newContributions        from 'reducers/checkout/contributions';
 
 const appReducer = combineReducers({ 
 	user,
 	errors,
-	loans: combineReducers({
-		collection,
-		request
-	}),
 	loan,
 	lightbox,
-	contributions,
 	charts,
+	loans: combineReducers({
+		collection: loansCollection,
+		request: loansRequest
+	}),
+	contributions: combineReducers({
+		collection: contributionsCollection,
+		request: contributionsRequest
+	}),
 	checkout: combineReducers({
 		contributions: newContributions,
 		step,

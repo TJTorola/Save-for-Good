@@ -7,8 +7,8 @@ export const receiveLoans = loans => ({
 	loans
 });
 
-export const setPage = page => ({
-	type: "SET_PAGE",
+export const setLoansPage = page => ({
+	type: "SET_LOANS_PAGE",
 	page
 });
 
