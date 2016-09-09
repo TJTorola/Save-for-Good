@@ -12,7 +12,9 @@ const body = (loan, contributions) => {
 }
 
 export default ({ loan, contributions, user, showLightbox }) => {
-	if (user) {
+	if (loan.amount - loan.contributed <= 0) {
+		return <div></div>;
+	} else if (user) {
 		return (
 			<div className="card-button green" onClick={ showLightbox.bind(null, loan) }>
 				<Icon i="s4g" /> { body(loan, contributions) }
@@ -23,6 +25,6 @@ export default ({ loan, contributions, user, showLightbox }) => {
 			<div className="card-button green" onClick={ go('/login') }>
 				<Icon i="s4g" /> Login to Contribute
 			</div>
-		)
+		);
 	}
 };
