@@ -312,8 +312,8 @@ She joined SPBD in 2014 to gain access to financial services.
 		name: "Ryan",
 		location: "Cumberland Gap, TN, United States",
 		loan_description: "A loan of $10,000 helps develop my brand, marketing tools, and tooling for classes and expanding my product portfolio.",
-		amount: 1000000
-		tags: [],,
+		amount: 1000000,
+		tags: [],
 		about: <<-ABOUT
 I live and manage my shop in the breathtaking Appalachian region surrounded by the Daniel Boone National Park in Cumberland Gap, Tennessee. This is a big change from busy Kansas City, Missouri where I lived until my move to Tennessee. While in Kansas City I owned and managed a motorcycle repair shop. Shortly after I moved from Kansas City, to Cumberland Gap, Tennessee in 2015, I met my neighbor William Brock, a traditional blacksmith and the owner of Rusted Bird Studio. Under his instruction, I learned the art of blacksmithing. Now I am blessed to manage my own shop surrounded by the breathtaking Appalachian mountains. I am a proud member of the Appalachian Area Chapter of Blacksmiths (AACB) and Artist-Blacksmith's Association of North America (ABANA). When I’m not blacksmithing, I’m exploring the area on my Harley or mountain biking. My goal in life is to work hard, stay humble, smile often, never stop learning, and always be thankful.
 		ABOUT
@@ -485,7 +485,7 @@ Located in southeast Asia, Myanmar is one of the poorest countries in the world.
 		name: "Siranush",
 		location: "Sevan, Armenia",
 		loan_description: "A loan of $1,700 helps to pay for her mother’s medical exam at the hospital as her mother has some health problems.",
-		amount: AMT,
+		amount: 170000,
 		tags: [:woman, :heath, :international],
 		about: <<-ABOUT
 Siranush is 24 years old and lives in Sevan city of Gegharkunik region. Siranush has a higher education with a specialty in economics. 
@@ -544,148 +544,24 @@ Charity is a 38-year-old, single lady who is blessed with four children. She liv
 
 With this loan, Charity will buy pesticides, manure and fertilizer to increase her farming. This will boost her business and increase her profits after sales. Charity had taken a previous loan and was able to pay it in time. This is her second loan. Her dreams are for her children to school to university and to open a hotel on a piece of land that she owns.
 		ABOUT
-	},
-	{
-		id: 38,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 39,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 40,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 41,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 42,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 43,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 44,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 45,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 46,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 47,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 48,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 49,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
-	},
-	{
-		id: 50,
-		name: "NAME",
-		location: "LOCATION",
-		loan_description: "DESC",
-		amount: AMT,
-		tags: [],
-		about: <<-ABOUT
-ABT
-		ABOUT
 	}
-]
+];
+
+entrepreneurs.each do |entrepreneur|
+	user = User.create!({
+		email: Faker::Internet.email(entrepreneur[:name]),
+		password: Faker::Internet.password,
+		name: entrepreneur[:name],
+		about: entrepreneur[:about],
+		location: entrepreneur[:location]
+	});
+
+	loan = Loan.create!({
+		user_id: user.id,
+		description: entrepreneur[:loan_description],
+		amount: entrepreneur[:amount],
+		end_date: Faker::Time.forward(60, :morning),
+ 		payment_period_length: [15, 30].sample,
+ 		loan_length: [30, 60, 90, 100, 180, 365, 365].sample
+	});
+end

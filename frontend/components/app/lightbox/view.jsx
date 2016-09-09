@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { toCurrency, go } from 'utilities/helper';
-import { Icon }           from 'modules/index';
+import { Icon, Input }    from 'modules/index';
 
 class Lightbox extends React.Component {
 	constructor(props) {
@@ -80,11 +80,9 @@ class Lightbox extends React.Component {
 						{ loan.name }'s loan.
 					</h2>
 					
-					<div className="input Lightbox-input">
-						<label className="input-label" htmlFor="contribution">Your Contribution</label>
-						<input className="input-input" type="text" required 
-							placeholder="Your Contribution" id="contribution" 
-							value={ this.state.amount } onChange={ handleChange }/>
+					<div className="Lightbox-input">
+						<Input id="contribution" placeholder="Your Contribution" type="text" 
+							defaultValue={ this.state.amount } onChange={ handleChange } />
 					</div>
 				</div>
 				<div className="Lightbox-toolbar toolbar">

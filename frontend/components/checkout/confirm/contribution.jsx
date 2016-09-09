@@ -1,6 +1,9 @@
 import React from 'react';
 
 import { imgUrl } from 'utilities/helper';
+import { Input } from 'modules/index';
+
+const test = value => parseFloat(value) == value && parseFloat(value) >= 0
 
 export default ({ contribution }) => (
 	<div className="Confirm-contribution">
@@ -16,9 +19,11 @@ export default ({ contribution }) => (
 					{ contribution.loan.location }
 				</div>
 			</div>
-			<div className="input Contribution-amount">
-				<label className="input-label" htmlFor="amount">Amount</label>
-				<input className="input-input" type="text" required placeholder="Amount" id="amount"
+
+			<div className="Contribution-amount">
+				<Input id="amount" placeholder="Amount"
+					errorMsg="Amount must be a positive number."
+					pattern={ test }
 					defaultValue={ contribution.amount / 100 } />
 			</div>
 		</div>

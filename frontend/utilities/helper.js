@@ -13,7 +13,7 @@ export const nlToP = block => {
 };
 
 export const imgUrl = loan => (
-	`//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpeg`
+	`//res.cloudinary.com/tjcloud/image/upload/w_300,h_300,c_fill/e${loan.id}.jpg`
 );
 
 export const linkState = component => field => event => {
