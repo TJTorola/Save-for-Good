@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Icon, Input } from 'modules/index';
+
 const userFromEvent = e => {
 	return {
 		email: e.target.querySelector("#email").value,
@@ -21,21 +23,20 @@ export default ({ createUser }) => (
 			<h1>Register</h1>
 		</section>
 
-		<section className="card">
-			<form className="u-mar-no" onSubmit={ submit(createUser) }>
-				<label htmlFor="email">Email:</label>
-				<input type="email" id="email" name="email" className="u-full-width" />
+		<form className="u-mar-no" onSubmit={ submit(createUser) }>
+			<section className="card">
+				<Input id="email" placeholder="Email" type="email" />
 
-				<label htmlFor="password">Password:</label>
-				<input type="password" id="password" className="u-full-width" />
+				<Input id="password" placeholder="Password" type="password" />
 
-				<label htmlFor="name">Name:</label>
-				<input type="text" id="name" className="u-full-width" />
+				<Input id="name" placeholder="Name" type="text" />
+			</section>
 
-				<hr />
-
-				<button type="submit" className="u-full-width">Submit Registration</button>
-			</form>
-		</section>
+			<div className="toolbar">
+				<button type="submit" className="card-button green">
+					<Icon i='signIn' /> Submit Registration
+				</button>
+			</div>
+		</form>
 	</div>
 );

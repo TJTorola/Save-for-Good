@@ -16,8 +16,10 @@ export default ({ contribution }) => (
 					{ contribution.loan.location }
 				</div>
 			</div>
-			<div className="Contribution-amount">
-				<input type="text" defaultValue={ contribution.amount / 100 } />
+			<div className="input Contribution-amount">
+				<label className="input-label" htmlFor="amount">Amount</label>
+				<input className="input-input" type="text" required placeholder="Amount" id="amount"
+					defaultValue={ contribution.amount / 100 } />
 			</div>
 		</div>
 	</div>

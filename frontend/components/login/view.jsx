@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon } from 'modules/index';
+import { Icon, Input } from 'modules/index';
 
 const userFromForm = () => {
 	return {
@@ -31,17 +31,22 @@ const guestLogin = createSession => () => {
 	document.querySelector("#email").value    = "";
 	document.querySelector("#password").value = "";
 
+	document.querySelector("#email").focus();
 	let interval = setInterval(() => {
+		if (i === GUEST_EMAIL.length) {
+			document.querySelector("#password").focus();
+		}
+
 		if (i > GUEST_EMAIL.length + GUEST_PASS.length) {
 			clearInterval(interval);
-			submit(createSession)();
+			setTimeout(() => { submit(createSession)(); }, 150)
 		} else if (i > GUEST_EMAIL.length) {
 			setPassword(i - GUEST_EMAIL.length);
 		} else {
 			setEmail(i);
 		}
 		i++;
-	}, 10);
+	}, 30);
 }
 
 export default ({ createSession }) => (
@@ -52,15 +57,12 @@ export default ({ createSession }) => (
 
 		<form className="u-mar-no" id="form" onSubmit={ submit(createSession) }>
 			<section className="card">
-				<div className="input">
-					<label className="input-label" htmlFor="email">Email</label>
-					<input className="input-input" type="text" required placeholder="Email" id="email" />
-				</div>
-
-				<div className="input">
-					<label className="input-label" htmlFor="password">Password</label>
-					<input className="input-input" type="password" required placeholder="Password" id="password" />
-				</div>
+				<Input id="email" placeholder="Email" type="text" 
+					errorMsg="Must be a valid email address."
+					pattern={/^.+@.+\..+$/} />
+				<Input id="password" placeholder="Password" type="password"
+					errorMsg="Password must be 8 characters long."
+					pattern={/.{8,}/} />
 			</section>
 
 
