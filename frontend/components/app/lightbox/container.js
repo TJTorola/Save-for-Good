@@ -12,7 +12,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	hide            : () => { dispatch(hideLightbox()) },
+	hide            : () => { 
+		dispatch(hideLightbox()) 
+	},
 	addContribution : (contribution) => { 
 		dispatch(addContribution(contribution)) 
 	},

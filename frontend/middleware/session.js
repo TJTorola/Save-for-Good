@@ -9,7 +9,7 @@ const createSession = (api, store, action) => {
 
 	promise.done(response => {
 		store.dispatch(receiveUser(response.user));
-		go('/portfolio')();
+		go('/entrepreneurs')();
 	});
 }
 

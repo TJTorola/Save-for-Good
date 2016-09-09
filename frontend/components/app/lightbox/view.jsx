@@ -24,8 +24,8 @@ class Lightbox extends React.Component {
 
 		let loan = this.props.loan;
 
-		if (amount > loan.amount) {
-			this.props.addError("Contribution may not exceed loan amount.");
+		if (amount > (loan.amount - loan.contributed)) {
+			this.props.addError("Contribution exceeds remaining amount.");
 			return false;
 		} else {
 			this.props.addContribution({ loan, amount });
