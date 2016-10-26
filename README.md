@@ -89,6 +89,8 @@ Anothe novel use of inline SVG came in the process of making a donation tree whi
 
 Built out of one inline SVG element with 14 seperate path  that each contained a group of leafs it then uses a range of points plotted on a sigmoid function in order to determine the opacity of each group in turn based that can be raised or lowered with a single value between 0 - 100.
 
+<img src="https://github.com/TJTorola/Save-for-Good/raw/master/docs/readme_imgs/sfg-tree.gif" width="100%" />
+
 ####Tree
 ```javascript
 import React from 'react';
