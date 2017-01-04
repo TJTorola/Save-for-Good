@@ -1,6 +1,8 @@
 # Save-for-Good
 [link]: http://www.save-for-good.com
 
+<img src="https://github.com/TJTorola/Save-for-Good/raw/master/docs/readme_imgs/preview.png" width="100%" />
+
 [Save for Good][link] is a crowdsourced Micro-Lending similar to the Kiva. Parternered with Maple Microfinance Save for Good is able to find Entrepreneurs who do not have access to traditional loan services and connect them with people who are willing to finance their loans.
 
 ##Framework & APIs
